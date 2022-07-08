@@ -1,3 +1,0 @@
-	dataset	lang	tokenizer	vocab_size	train	token
-0	en_hi	en	en_char_0.785k	785	5.4905104637146	90.44361591339111
-1	en_hi	hi	hi_char_0.785k	785	5.881033658981323	104.7110447883606

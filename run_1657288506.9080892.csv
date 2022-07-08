@@ -1,0 +1,2 @@
+	dataset	lang	tokenizer	vocab_size	train	token
+0	lt_en	en	en_char_0.24k	240	3.0444459915161133	53.18307638168335
