@@ -1,0 +1,2797 @@
+hftokenizer/
+├── data
+│   ├── en_ga
+│   │   ├── dev.en
+│   │   ├── dev.ga
+│   │   ├── test.en2ga.en
+│   │   ├── test.en2ga.ga
+│   │   ├── test.ga2en.ga
+│   │   ├── train
+│   │   │   ├── text
+│   │   │   │   ├── train_0.en
+│   │   │   │   ├── train_0.ga
+│   │   │   │   ├── train_1.en
+│   │   │   │   └── train_1.ga
+│   │   │   └── tokenized
+│   │   │       ├── dev_hft_pretokenized.en
+│   │   │       ├── dev_hft_pretokenized.ga
+│   │   │       ├── dev_toks_en_bpe_0.5k.en
+│   │   │       ├── dev_toks_en_bpe_1.0k.en
+│   │   │       ├── dev_toks_en_bpe_16.0k.en
+│   │   │       ├── dev_toks_en_bpe_2.0k.en
+│   │   │       ├── dev_toks_en_bpe_32.0k.en
+│   │   │       ├── dev_toks_en_bpe_4.0k.en
+│   │   │       ├── dev_toks_en_bpe_8.0k.en
+│   │   │       ├── dev_toks_en_hft_0.5k.en
+│   │   │       ├── dev_toks_en_hft_0.75k.en
+│   │   │       ├── dev_toks_en_hft_1.5k.en
+│   │   │       ├── dev_toks_en_hft_3.0k.en
+│   │   │       ├── dev_toks_en_hft_4.0k.en
+│   │   │       ├── dev_toks_en_hft_6.0k.en
+│   │   │       ├── dev_toks_en_hft_8.0k.en
+│   │   │       ├── dev_toks_en_unigram_0.5k.en
+│   │   │       ├── dev_toks_en_unigram_0.75k.en
+│   │   │       ├── dev_toks_en_unigram_1.5k.en
+│   │   │       ├── dev_toks_en_unigram_3.0k.en
+│   │   │       ├── dev_toks_en_unigram_4.0k.en
+│   │   │       ├── dev_toks_en_unigram_6.0k.en
+│   │   │       ├── dev_toks_en_unigram_8.0k.en
+│   │   │       ├── dev_toks_ga_bpe_0.5k.ga
+│   │   │       ├── dev_toks_ga_bpe_1.0k.ga
+│   │   │       ├── dev_toks_ga_bpe_16.0k.ga
+│   │   │       ├── dev_toks_ga_bpe_2.0k.ga
+│   │   │       ├── dev_toks_ga_bpe_32.0k.ga
+│   │   │       ├── dev_toks_ga_bpe_4.0k.ga
+│   │   │       ├── dev_toks_ga_bpe_8.0k.ga
+│   │   │       ├── dev_toks_ga_hft_0.5k.ga
+│   │   │       ├── dev_toks_ga_hft_0.75k.ga
+│   │   │       ├── dev_toks_ga_hft_1.5k.ga
+│   │   │       ├── dev_toks_ga_hft_3.0k.ga
+│   │   │       ├── dev_toks_ga_hft_4.0k.ga
+│   │   │       ├── dev_toks_ga_hft_6.0k.ga
+│   │   │       ├── dev_toks_ga_hft_8.0k.ga
+│   │   │       ├── dev_toks_ga_unigram_0.5k.ga
+│   │   │       ├── dev_toks_ga_unigram_0.75k.ga
+│   │   │       ├── dev_toks_ga_unigram_1.5k.ga
+│   │   │       ├── dev_toks_ga_unigram_3.0k.ga
+│   │   │       ├── dev_toks_ga_unigram_4.0k.ga
+│   │   │       ├── dev_toks_ga_unigram_6.0k.ga
+│   │   │       ├── dev_toks_ga_unigram_8.0k.ga
+│   │   │       ├── hft_pretokenized.en
+│   │   │       ├── hft_pretokenized.ga
+│   │   │       ├── toks_en_bpe_0.5k.en
+│   │   │       ├── toks_en_bpe_1.0k.en
+│   │   │       ├── toks_en_bpe_16.0k.en
+│   │   │       ├── toks_en_bpe_2.0k.en
+│   │   │       ├── toks_en_bpe_32.0k.en
+│   │   │       ├── toks_en_bpe_4.0k.en
+│   │   │       ├── toks_en_bpe_8.0k.en
+│   │   │       ├── toks_en_char_0.118k.en
+│   │   │       ├── toks_en_hft_0.5k.en
+│   │   │       ├── toks_en_hft_0.75k.en
+│   │   │       ├── toks_en_hft_1.5k.en
+│   │   │       ├── toks_en_hft_3.0k.en
+│   │   │       ├── toks_en_hft_4.0k.en
+│   │   │       ├── toks_en_hft_6.0k.en
+│   │   │       ├── toks_en_hft_8.0k.en
+│   │   │       ├── toks_en_unigram_0.5k.en
+│   │   │       ├── toks_en_unigram_0.75k.en
+│   │   │       ├── toks_en_unigram_1.5k.en
+│   │   │       ├── toks_en_unigram_3.0k.en
+│   │   │       ├── toks_en_unigram_4.0k.en
+│   │   │       ├── toks_en_unigram_6.0k.en
+│   │   │       ├── toks_en_unigram_8.0k.en
+│   │   │       ├── toks_ga_bpe_0.5k.ga
+│   │   │       ├── toks_ga_bpe_1.0k.ga
+│   │   │       ├── toks_ga_bpe_16.0k.ga
+│   │   │       ├── toks_ga_bpe_2.0k.ga
+│   │   │       ├── toks_ga_bpe_32.0k.ga
+│   │   │       ├── toks_ga_bpe_4.0k.ga
+│   │   │       ├── toks_ga_bpe_8.0k.ga
+│   │   │       ├── toks_ga_char_0.118k.ga
+│   │   │       ├── toks_ga_char_0.123k.ga
+│   │   │       ├── toks_ga_hft_0.5k.ga
+│   │   │       ├── toks_ga_hft_0.75k.ga
+│   │   │       ├── toks_ga_hft_1.5k.ga
+│   │   │       ├── toks_ga_hft_3.0k.ga
+│   │   │       ├── toks_ga_hft_4.0k.ga
+│   │   │       ├── toks_ga_hft_6.0k.ga
+│   │   │       ├── toks_ga_hft_8.0k.ga
+│   │   │       ├── toks_ga_unigram_0.5k.ga
+│   │   │       ├── toks_ga_unigram_0.75k.ga
+│   │   │       ├── toks_ga_unigram_1.5k.ga
+│   │   │       ├── toks_ga_unigram_3.0k.ga
+│   │   │       ├── toks_ga_unigram_4.0k.ga
+│   │   │       ├── toks_ga_unigram_6.0k.ga
+│   │   │       └── toks_ga_unigram_8.0k.ga
+│   │   ├── train.en
+│   │   └── train.ga
+│   ├── en_hi
+│   │   ├── dev.en
+│   │   ├── dev.hi
+│   │   ├── train
+│   │   │   ├── text
+│   │   │   │   ├── train_0.en
+│   │   │   │   ├── train_0.hi
+│   │   │   │   ├── train_1.en
+│   │   │   │   ├── train_1.hi
+│   │   │   │   ├── train_2.en
+│   │   │   │   ├── train_2.hi
+│   │   │   │   ├── train_3.en
+│   │   │   │   └── train_3.hi
+│   │   │   └── tokenized
+│   │   │       ├── dev_hft_pretokenized.en
+│   │   │       ├── dev_hft_pretokenized.hi
+│   │   │       ├── dev_toks_en_bpe_0.5k.en
+│   │   │       ├── dev_toks_en_bpe_1.0k.en
+│   │   │       ├── dev_toks_en_bpe_16.0k.en
+│   │   │       ├── dev_toks_en_bpe_2.0k.en
+│   │   │       ├── dev_toks_en_bpe_32.0k.en
+│   │   │       ├── dev_toks_en_bpe_4.0k.en
+│   │   │       ├── dev_toks_en_bpe_8.0k.en
+│   │   │       ├── dev_toks_en_hft_0.5k.en
+│   │   │       ├── dev_toks_en_hft_0.75k.en
+│   │   │       ├── dev_toks_en_hft_1.5k.en
+│   │   │       ├── dev_toks_en_hft_3.0k.en
+│   │   │       ├── dev_toks_en_hft_4.0k.en
+│   │   │       ├── dev_toks_en_hft_6.0k.en
+│   │   │       ├── dev_toks_en_hft_8.0k.en
+│   │   │       ├── dev_toks_en_unigram_0.5k.en
+│   │   │       ├── dev_toks_en_unigram_0.75k.en
+│   │   │       ├── dev_toks_en_unigram_1.5k.en
+│   │   │       ├── dev_toks_en_unigram_3.0k.en
+│   │   │       ├── dev_toks_en_unigram_4.0k.en
+│   │   │       ├── dev_toks_en_unigram_6.0k.en
+│   │   │       ├── dev_toks_en_unigram_8.0k.en
+│   │   │       ├── dev_toks_hi_bpe_0.5k.hi
+│   │   │       ├── dev_toks_hi_bpe_1.0k.hi
+│   │   │       ├── dev_toks_hi_bpe_16.0k.hi
+│   │   │       ├── dev_toks_hi_bpe_2.0k.hi
+│   │   │       ├── dev_toks_hi_bpe_32.0k.hi
+│   │   │       ├── dev_toks_hi_bpe_4.0k.hi
+│   │   │       ├── dev_toks_hi_bpe_8.0k.hi
+│   │   │       ├── dev_toks_hi_hft_0.5k.hi
+│   │   │       ├── dev_toks_hi_hft_0.75k.hi
+│   │   │       ├── dev_toks_hi_hft_1.5k.hi
+│   │   │       ├── dev_toks_hi_hft_3.0k.hi
+│   │   │       ├── dev_toks_hi_hft_4.0k.hi
+│   │   │       ├── dev_toks_hi_hft_6.0k.hi
+│   │   │       ├── dev_toks_hi_hft_8.0k.hi
+│   │   │       ├── dev_toks_hi_unigram_0.5k.hi
+│   │   │       ├── dev_toks_hi_unigram_0.75k.hi
+│   │   │       ├── dev_toks_hi_unigram_1.5k.hi
+│   │   │       ├── dev_toks_hi_unigram_3.0k.hi
+│   │   │       ├── dev_toks_hi_unigram_4.0k.hi
+│   │   │       ├── dev_toks_hi_unigram_6.0k.hi
+│   │   │       ├── dev_toks_hi_unigram_8.0k.hi
+│   │   │       ├── hft_pretokenized.en
+│   │   │       ├── hft_pretokenized.hi
+│   │   │       ├── toks_en_bpe_0.5k.en
+│   │   │       ├── toks_en_bpe_1.0k.en
+│   │   │       ├── toks_en_bpe_16.0k.en
+│   │   │       ├── toks_en_bpe_2.0k.en
+│   │   │       ├── toks_en_bpe_32.0k.en
+│   │   │       ├── toks_en_bpe_4.0k.en
+│   │   │       ├── toks_en_bpe_8.0k.en
+│   │   │       ├── toks_en_hft_0.5k.en
+│   │   │       ├── toks_en_hft_0.75k.en
+│   │   │       ├── toks_en_hft_1.5k.en
+│   │   │       ├── toks_en_hft_3.0k.en
+│   │   │       ├── toks_en_hft_4.0k.en
+│   │   │       ├── toks_en_hft_6.0k.en
+│   │   │       ├── toks_en_hft_8.0k.en
+│   │   │       ├── toks_en_unigram_0.5k.en
+│   │   │       ├── toks_en_unigram_0.75k.en
+│   │   │       ├── toks_en_unigram_1.5k.en
+│   │   │       ├── toks_en_unigram_3.0k.en
+│   │   │       ├── toks_en_unigram_4.0k.en
+│   │   │       ├── toks_en_unigram_6.0k.en
+│   │   │       ├── toks_en_unigram_8.0k.en
+│   │   │       ├── toks_hi_bpe_0.5k.hi
+│   │   │       ├── toks_hi_bpe_1.0k.hi
+│   │   │       ├── toks_hi_bpe_16.0k.hi
+│   │   │       ├── toks_hi_bpe_2.0k.hi
+│   │   │       ├── toks_hi_bpe_32.0k.hi
+│   │   │       ├── toks_hi_bpe_4.0k.hi
+│   │   │       ├── toks_hi_bpe_8.0k.hi
+│   │   │       ├── toks_hi_hft_0.5k.hi
+│   │   │       ├── toks_hi_hft_0.75k.hi
+│   │   │       ├── toks_hi_hft_1.5k.hi
+│   │   │       ├── toks_hi_hft_3.0k.hi
+│   │   │       ├── toks_hi_hft_4.0k.hi
+│   │   │       ├── toks_hi_hft_6.0k.hi
+│   │   │       ├── toks_hi_hft_8.0k.hi
+│   │   │       ├── toks_hi_unigram_0.5k.hi
+│   │   │       ├── toks_hi_unigram_0.75k.hi
+│   │   │       ├── toks_hi_unigram_1.5k.hi
+│   │   │       ├── toks_hi_unigram_3.0k.hi
+│   │   │       ├── toks_hi_unigram_4.0k.hi
+│   │   │       ├── toks_hi_unigram_6.0k.hi
+│   │   │       └── toks_hi_unigram_8.0k.hi
+│   │   ├── train.en
+│   │   └── train.hi
+│   ├── en_lt
+│   │   ├── dev.en
+│   │   ├── dev.lt
+│   │   ├── train
+│   │   │   ├── text
+│   │   │   │   ├── train_0.en
+│   │   │   │   ├── train_0.lt
+│   │   │   │   ├── train_1.en
+│   │   │   │   ├── train_1.lt
+│   │   │   │   ├── train_2.en
+│   │   │   │   ├── train_2.lt
+│   │   │   │   ├── train_3.en
+│   │   │   │   └── train_3.lt
+│   │   │   └── tokenized
+│   │   │       ├── dev_hft_pretokenized.en
+│   │   │       ├── dev_hft_pretokenized.lt
+│   │   │       ├── dev_toks_en_bpe_0.5k.en
+│   │   │       ├── dev_toks_en_bpe_1.0k.en
+│   │   │       ├── dev_toks_en_bpe_16.0k.en
+│   │   │       ├── dev_toks_en_bpe_2.0k.en
+│   │   │       ├── dev_toks_en_bpe_32.0k.en
+│   │   │       ├── dev_toks_en_bpe_4.0k.en
+│   │   │       ├── dev_toks_en_bpe_8.0k.en
+│   │   │       ├── dev_toks_en_hft_0.5k.en
+│   │   │       ├── dev_toks_en_hft_0.75k.en
+│   │   │       ├── dev_toks_en_hft_1.5k.en
+│   │   │       ├── dev_toks_en_hft_3.0k.en
+│   │   │       ├── dev_toks_en_hft_4.0k.en
+│   │   │       ├── dev_toks_en_hft_6.0k.en
+│   │   │       ├── dev_toks_en_hft_8.0k.en
+│   │   │       ├── dev_toks_en_unigram_0.5k.en
+│   │   │       ├── dev_toks_en_unigram_0.75k.en
+│   │   │       ├── dev_toks_en_unigram_1.5k.en
+│   │   │       ├── dev_toks_en_unigram_3.0k.en
+│   │   │       ├── dev_toks_en_unigram_4.0k.en
+│   │   │       ├── dev_toks_en_unigram_6.0k.en
+│   │   │       ├── dev_toks_en_unigram_8.0k.en
+│   │   │       ├── dev_toks_lt_bpe_0.5k.lt
+│   │   │       ├── dev_toks_lt_bpe_1.0k.lt
+│   │   │       ├── dev_toks_lt_bpe_16.0k.lt
+│   │   │       ├── dev_toks_lt_bpe_2.0k.lt
+│   │   │       ├── dev_toks_lt_bpe_32.0k.lt
+│   │   │       ├── dev_toks_lt_bpe_4.0k.lt
+│   │   │       ├── dev_toks_lt_bpe_8.0k.lt
+│   │   │       ├── dev_toks_lt_hft_0.5k.lt
+│   │   │       ├── dev_toks_lt_hft_0.75k.lt
+│   │   │       ├── dev_toks_lt_hft_1.5k.lt
+│   │   │       ├── dev_toks_lt_hft_3.0k.lt
+│   │   │       ├── dev_toks_lt_hft_4.0k.lt
+│   │   │       ├── dev_toks_lt_hft_6.0k.lt
+│   │   │       ├── dev_toks_lt_hft_8.0k.lt
+│   │   │       ├── dev_toks_lt_unigram_0.5k.lt
+│   │   │       ├── dev_toks_lt_unigram_0.75k.lt
+│   │   │       ├── dev_toks_lt_unigram_1.5k.lt
+│   │   │       ├── dev_toks_lt_unigram_3.0k.lt
+│   │   │       ├── dev_toks_lt_unigram_4.0k.lt
+│   │   │       ├── dev_toks_lt_unigram_6.0k.lt
+│   │   │       ├── dev_toks_lt_unigram_8.0k.lt
+│   │   │       ├── hft_pretokenized.en
+│   │   │       ├── hft_pretokenized.lt
+│   │   │       ├── toks_en_bpe_0.5k.en
+│   │   │       ├── toks_en_bpe_1.0k.en
+│   │   │       ├── toks_en_bpe_16.0k.en
+│   │   │       ├── toks_en_bpe_2.0k.en
+│   │   │       ├── toks_en_bpe_32.0k.en
+│   │   │       ├── toks_en_bpe_4.0k.en
+│   │   │       ├── toks_en_bpe_8.0k.en
+│   │   │       ├── toks_en_hft_0.5k.en
+│   │   │       ├── toks_en_hft_0.75k.en
+│   │   │       ├── toks_en_hft_1.5k.en
+│   │   │       ├── toks_en_hft_3.0k.en
+│   │   │       ├── toks_en_hft_4.0k.en
+│   │   │       ├── toks_en_hft_6.0k.en
+│   │   │       ├── toks_en_hft_8.0k.en
+│   │   │       ├── toks_en_unigram_0.5k.en
+│   │   │       ├── toks_en_unigram_0.75k.en
+│   │   │       ├── toks_en_unigram_1.5k.en
+│   │   │       ├── toks_en_unigram_3.0k.en
+│   │   │       ├── toks_en_unigram_4.0k.en
+│   │   │       ├── toks_en_unigram_6.0k.en
+│   │   │       ├── toks_en_unigram_8.0k.en
+│   │   │       ├── toks_lt_bpe_0.5k.lt
+│   │   │       ├── toks_lt_bpe_1.0k.lt
+│   │   │       ├── toks_lt_bpe_16.0k.lt
+│   │   │       ├── toks_lt_bpe_2.0k.lt
+│   │   │       ├── toks_lt_bpe_32.0k.lt
+│   │   │       ├── toks_lt_bpe_4.0k.lt
+│   │   │       ├── toks_lt_bpe_8.0k.lt
+│   │   │       ├── toks_lt_hft_0.5k.lt
+│   │   │       ├── toks_lt_hft_0.75k.lt
+│   │   │       ├── toks_lt_hft_1.5k.lt
+│   │   │       ├── toks_lt_hft_3.0k.lt
+│   │   │       ├── toks_lt_hft_4.0k.lt
+│   │   │       ├── toks_lt_hft_6.0k.lt
+│   │   │       ├── toks_lt_hft_8.0k.lt
+│   │   │       ├── toks_lt_unigram_0.5k.lt
+│   │   │       ├── toks_lt_unigram_0.75k.lt
+│   │   │       ├── toks_lt_unigram_1.5k.lt
+│   │   │       ├── toks_lt_unigram_3.0k.lt
+│   │   │       ├── toks_lt_unigram_4.0k.lt
+│   │   │       ├── toks_lt_unigram_6.0k.lt
+│   │   │       └── toks_lt_unigram_8.0k.lt
+│   │   ├── train.en
+│   │   └── train.lt
+│   └── en_mr
+│       ├── dev.en
+│       ├── dev.mr
+│       ├── test.en2mr.en
+│       ├── test.mr2en.mr
+│       ├── train
+│       │   ├── text
+│       │   │   ├── train_0.en
+│       │   │   ├── train_0.mr
+│       │   │   ├── train_1.en
+│       │   │   ├── train_1.mr
+│       │   │   ├── train_2.en
+│       │   │   ├── train_2.mr
+│       │   │   ├── train_3.en
+│       │   │   ├── train_3.mr
+│       │   │   ├── train_4.en
+│       │   │   └── train_4.mr
+│       │   └── tokenized
+│       │       ├── dev_hft_pretokenized.en
+│       │       ├── dev_hft_pretokenized.mr
+│       │       ├── dev_toks_en_bpe_0.5k.en
+│       │       ├── dev_toks_en_bpe_1.0k.en
+│       │       ├── dev_toks_en_bpe_16.0k.en
+│       │       ├── dev_toks_en_bpe_2.0k.en
+│       │       ├── dev_toks_en_bpe_32.0k.en
+│       │       ├── dev_toks_en_bpe_4.0k.en
+│       │       ├── dev_toks_en_bpe_8.0k.en
+│       │       ├── dev_toks_en_hft_0.5k.en
+│       │       ├── dev_toks_en_hft_0.75k.en
+│       │       ├── dev_toks_en_hft_1.5k.en
+│       │       ├── dev_toks_en_hft_3.0k.en
+│       │       ├── dev_toks_en_hft_4.0k.en
+│       │       ├── dev_toks_en_hft_6.0k.en
+│       │       ├── dev_toks_en_hft_8.0k.en
+│       │       ├── dev_toks_en_unigram_0.5k.en
+│       │       ├── dev_toks_en_unigram_0.75k.en
+│       │       ├── dev_toks_en_unigram_1.5k.en
+│       │       ├── dev_toks_en_unigram_3.0k.en
+│       │       ├── dev_toks_en_unigram_4.0k.en
+│       │       ├── dev_toks_en_unigram_6.0k.en
+│       │       ├── dev_toks_en_unigram_8.0k.en
+│       │       ├── dev_toks_mr_bpe_0.5k.mr
+│       │       ├── dev_toks_mr_bpe_1.0k.mr
+│       │       ├── dev_toks_mr_bpe_16.0k.mr
+│       │       ├── dev_toks_mr_bpe_2.0k.mr
+│       │       ├── dev_toks_mr_bpe_32.0k.mr
+│       │       ├── dev_toks_mr_bpe_4.0k.mr
+│       │       ├── dev_toks_mr_bpe_8.0k.mr
+│       │       ├── dev_toks_mr_hft_0.5k.mr
+│       │       ├── dev_toks_mr_hft_0.75k.mr
+│       │       ├── dev_toks_mr_hft_1.5k.mr
+│       │       ├── dev_toks_mr_hft_3.0k.mr
+│       │       ├── dev_toks_mr_hft_4.0k.mr
+│       │       ├── dev_toks_mr_hft_6.0k.mr
+│       │       ├── dev_toks_mr_hft_8.0k.mr
+│       │       ├── dev_toks_mr_unigram_0.5k.mr
+│       │       ├── dev_toks_mr_unigram_0.75k.mr
+│       │       ├── dev_toks_mr_unigram_1.5k.mr
+│       │       ├── dev_toks_mr_unigram_3.0k.mr
+│       │       ├── dev_toks_mr_unigram_4.0k.mr
+│       │       ├── dev_toks_mr_unigram_6.0k.mr
+│       │       ├── dev_toks_mr_unigram_8.0k.mr
+│       │       ├── hft_pretokenized.en
+│       │       ├── hft_pretokenized.mr
+│       │       ├── toks_en_bpe_0.5k.en
+│       │       ├── toks_en_bpe_1.0k.en
+│       │       ├── toks_en_bpe_16.0k.en
+│       │       ├── toks_en_bpe_2.0k.en
+│       │       ├── toks_en_bpe_32.0k.en
+│       │       ├── toks_en_bpe_4.0k.en
+│       │       ├── toks_en_bpe_8.0k.en
+│       │       ├── toks_en_char_0.141k.en
+│       │       ├── toks_en_hft_0.5k.en
+│       │       ├── toks_en_hft_0.75k.en
+│       │       ├── toks_en_hft_1.5k.en
+│       │       ├── toks_en_hft_3.0k.en
+│       │       ├── toks_en_hft_4.0k.en
+│       │       ├── toks_en_hft_6.0k.en
+│       │       ├── toks_en_hft_8.0k.en
+│       │       ├── toks_en_unigram_0.5k.en
+│       │       ├── toks_en_unigram_0.75k.en
+│       │       ├── toks_en_unigram_1.5k.en
+│       │       ├── toks_en_unigram_3.0k.en
+│       │       ├── toks_en_unigram_4.0k.en
+│       │       ├── toks_en_unigram_6.0k.en
+│       │       ├── toks_en_unigram_8.0k.en
+│       │       ├── toks_mr_bpe_0.5k.mr
+│       │       ├── toks_mr_bpe_1.0k.mr
+│       │       ├── toks_mr_bpe_16.0k.mr
+│       │       ├── toks_mr_bpe_2.0k.mr
+│       │       ├── toks_mr_bpe_32.0k.mr
+│       │       ├── toks_mr_bpe_4.0k.mr
+│       │       ├── toks_mr_bpe_8.0k.mr
+│       │       ├── toks_mr_char_0.141k.mr
+│       │       ├── toks_mr_char_0.188k.mr
+│       │       ├── toks_mr_hft_0.5k.mr
+│       │       ├── toks_mr_hft_0.75k.mr
+│       │       ├── toks_mr_hft_1.5k.mr
+│       │       ├── toks_mr_hft_3.0k.mr
+│       │       ├── toks_mr_hft_4.0k.mr
+│       │       ├── toks_mr_hft_6.0k.mr
+│       │       ├── toks_mr_hft_8.0k.mr
+│       │       ├── toks_mr_unigram_0.5k.mr
+│       │       ├── toks_mr_unigram_0.75k.mr
+│       │       ├── toks_mr_unigram_1.5k.mr
+│       │       ├── toks_mr_unigram_3.0k.mr
+│       │       ├── toks_mr_unigram_4.0k.mr
+│       │       ├── toks_mr_unigram_6.0k.mr
+│       │       └── toks_mr_unigram_8.0k.mr
+│       ├── train.en
+│       └── train.mr
+├── data_big
+│   ├── en_hi
+│   │   ├── train
+│   │   │   ├── text
+│   │   │   │   ├── train_0.en
+│   │   │   │   ├── train_0.hi
+│   │   │   │   ├── train_100.en
+│   │   │   │   ├── train_100.hi
+│   │   │   │   ├── train_101.en
+│   │   │   │   ├── train_101.hi
+│   │   │   │   ├── train_102.en
+│   │   │   │   ├── train_102.hi
+│   │   │   │   ├── train_103.en
+│   │   │   │   ├── train_103.hi
+│   │   │   │   ├── train_104.en
+│   │   │   │   ├── train_104.hi
+│   │   │   │   ├── train_105.en
+│   │   │   │   ├── train_105.hi
+│   │   │   │   ├── train_106.en
+│   │   │   │   ├── train_106.hi
+│   │   │   │   ├── train_107.en
+│   │   │   │   ├── train_107.hi
+│   │   │   │   ├── train_108.en
+│   │   │   │   ├── train_108.hi
+│   │   │   │   ├── train_109.en
+│   │   │   │   ├── train_109.hi
+│   │   │   │   ├── train_10.en
+│   │   │   │   ├── train_10.hi
+│   │   │   │   ├── train_110.en
+│   │   │   │   ├── train_110.hi
+│   │   │   │   ├── train_111.en
+│   │   │   │   ├── train_111.hi
+│   │   │   │   ├── train_112.en
+│   │   │   │   ├── train_112.hi
+│   │   │   │   ├── train_113.en
+│   │   │   │   ├── train_113.hi
+│   │   │   │   ├── train_114.en
+│   │   │   │   ├── train_114.hi
+│   │   │   │   ├── train_115.en
+│   │   │   │   ├── train_115.hi
+│   │   │   │   ├── train_116.en
+│   │   │   │   ├── train_116.hi
+│   │   │   │   ├── train_117.en
+│   │   │   │   ├── train_117.hi
+│   │   │   │   ├── train_118.en
+│   │   │   │   ├── train_118.hi
+│   │   │   │   ├── train_119.en
+│   │   │   │   ├── train_119.hi
+│   │   │   │   ├── train_11.en
+│   │   │   │   ├── train_11.hi
+│   │   │   │   ├── train_120.en
+│   │   │   │   ├── train_120.hi
+│   │   │   │   ├── train_121.en
+│   │   │   │   ├── train_121.hi
+│   │   │   │   ├── train_122.en
+│   │   │   │   ├── train_122.hi
+│   │   │   │   ├── train_123.en
+│   │   │   │   ├── train_123.hi
+│   │   │   │   ├── train_124.en
+│   │   │   │   ├── train_124.hi
+│   │   │   │   ├── train_125.en
+│   │   │   │   ├── train_125.hi
+│   │   │   │   ├── train_126.en
+│   │   │   │   ├── train_126.hi
+│   │   │   │   ├── train_127.en
+│   │   │   │   ├── train_127.hi
+│   │   │   │   ├── train_128.en
+│   │   │   │   ├── train_128.hi
+│   │   │   │   ├── train_129.en
+│   │   │   │   ├── train_129.hi
+│   │   │   │   ├── train_12.en
+│   │   │   │   ├── train_12.hi
+│   │   │   │   ├── train_130.en
+│   │   │   │   ├── train_130.hi
+│   │   │   │   ├── train_131.en
+│   │   │   │   ├── train_131.hi
+│   │   │   │   ├── train_132.en
+│   │   │   │   ├── train_132.hi
+│   │   │   │   ├── train_133.en
+│   │   │   │   ├── train_133.hi
+│   │   │   │   ├── train_134.en
+│   │   │   │   ├── train_134.hi
+│   │   │   │   ├── train_135.en
+│   │   │   │   ├── train_135.hi
+│   │   │   │   ├── train_136.en
+│   │   │   │   ├── train_136.hi
+│   │   │   │   ├── train_137.en
+│   │   │   │   ├── train_137.hi
+│   │   │   │   ├── train_138.en
+│   │   │   │   ├── train_138.hi
+│   │   │   │   ├── train_139.en
+│   │   │   │   ├── train_139.hi
+│   │   │   │   ├── train_13.en
+│   │   │   │   ├── train_13.hi
+│   │   │   │   ├── train_140.en
+│   │   │   │   ├── train_140.hi
+│   │   │   │   ├── train_141.en
+│   │   │   │   ├── train_141.hi
+│   │   │   │   ├── train_142.en
+│   │   │   │   ├── train_142.hi
+│   │   │   │   ├── train_143.en
+│   │   │   │   ├── train_143.hi
+│   │   │   │   ├── train_144.en
+│   │   │   │   ├── train_144.hi
+│   │   │   │   ├── train_145.en
+│   │   │   │   ├── train_145.hi
+│   │   │   │   ├── train_146.en
+│   │   │   │   ├── train_146.hi
+│   │   │   │   ├── train_147.en
+│   │   │   │   ├── train_147.hi
+│   │   │   │   ├── train_148.en
+│   │   │   │   ├── train_148.hi
+│   │   │   │   ├── train_149.en
+│   │   │   │   ├── train_149.hi
+│   │   │   │   ├── train_14.en
+│   │   │   │   ├── train_14.hi
+│   │   │   │   ├── train_150.en
+│   │   │   │   ├── train_150.hi
+│   │   │   │   ├── train_151.en
+│   │   │   │   ├── train_151.hi
+│   │   │   │   ├── train_152.en
+│   │   │   │   ├── train_152.hi
+│   │   │   │   ├── train_153.en
+│   │   │   │   ├── train_153.hi
+│   │   │   │   ├── train_154.en
+│   │   │   │   ├── train_154.hi
+│   │   │   │   ├── train_155.en
+│   │   │   │   ├── train_155.hi
+│   │   │   │   ├── train_156.en
+│   │   │   │   ├── train_156.hi
+│   │   │   │   ├── train_157.en
+│   │   │   │   ├── train_157.hi
+│   │   │   │   ├── train_158.en
+│   │   │   │   ├── train_158.hi
+│   │   │   │   ├── train_159.en
+│   │   │   │   ├── train_159.hi
+│   │   │   │   ├── train_15.en
+│   │   │   │   ├── train_15.hi
+│   │   │   │   ├── train_160.en
+│   │   │   │   ├── train_160.hi
+│   │   │   │   ├── train_161.en
+│   │   │   │   ├── train_161.hi
+│   │   │   │   ├── train_162.en
+│   │   │   │   ├── train_162.hi
+│   │   │   │   ├── train_163.en
+│   │   │   │   ├── train_163.hi
+│   │   │   │   ├── train_164.en
+│   │   │   │   ├── train_164.hi
+│   │   │   │   ├── train_165.en
+│   │   │   │   ├── train_165.hi
+│   │   │   │   ├── train_166.en
+│   │   │   │   ├── train_166.hi
+│   │   │   │   ├── train_167.en
+│   │   │   │   ├── train_167.hi
+│   │   │   │   ├── train_168.en
+│   │   │   │   ├── train_168.hi
+│   │   │   │   ├── train_169.en
+│   │   │   │   ├── train_169.hi
+│   │   │   │   ├── train_16.en
+│   │   │   │   ├── train_16.hi
+│   │   │   │   ├── train_170.en
+│   │   │   │   ├── train_170.hi
+│   │   │   │   ├── train_171.en
+│   │   │   │   ├── train_171.hi
+│   │   │   │   ├── train_172.en
+│   │   │   │   ├── train_172.hi
+│   │   │   │   ├── train_173.en
+│   │   │   │   ├── train_173.hi
+│   │   │   │   ├── train_174.en
+│   │   │   │   ├── train_174.hi
+│   │   │   │   ├── train_175.en
+│   │   │   │   ├── train_175.hi
+│   │   │   │   ├── train_176.en
+│   │   │   │   ├── train_176.hi
+│   │   │   │   ├── train_177.en
+│   │   │   │   ├── train_177.hi
+│   │   │   │   ├── train_178.en
+│   │   │   │   ├── train_178.hi
+│   │   │   │   ├── train_179.en
+│   │   │   │   ├── train_179.hi
+│   │   │   │   ├── train_17.en
+│   │   │   │   ├── train_17.hi
+│   │   │   │   ├── train_180.en
+│   │   │   │   ├── train_180.hi
+│   │   │   │   ├── train_181.en
+│   │   │   │   ├── train_181.hi
+│   │   │   │   ├── train_182.en
+│   │   │   │   ├── train_182.hi
+│   │   │   │   ├── train_183.en
+│   │   │   │   ├── train_183.hi
+│   │   │   │   ├── train_184.en
+│   │   │   │   ├── train_184.hi
+│   │   │   │   ├── train_185.en
+│   │   │   │   ├── train_185.hi
+│   │   │   │   ├── train_186.en
+│   │   │   │   ├── train_186.hi
+│   │   │   │   ├── train_187.en
+│   │   │   │   ├── train_187.hi
+│   │   │   │   ├── train_188.en
+│   │   │   │   ├── train_188.hi
+│   │   │   │   ├── train_189.en
+│   │   │   │   ├── train_189.hi
+│   │   │   │   ├── train_18.en
+│   │   │   │   ├── train_18.hi
+│   │   │   │   ├── train_190.en
+│   │   │   │   ├── train_190.hi
+│   │   │   │   ├── train_191.en
+│   │   │   │   ├── train_191.hi
+│   │   │   │   ├── train_192.en
+│   │   │   │   ├── train_192.hi
+│   │   │   │   ├── train_193.en
+│   │   │   │   ├── train_193.hi
+│   │   │   │   ├── train_194.en
+│   │   │   │   ├── train_194.hi
+│   │   │   │   ├── train_195.en
+│   │   │   │   ├── train_195.hi
+│   │   │   │   ├── train_196.en
+│   │   │   │   ├── train_196.hi
+│   │   │   │   ├── train_197.en
+│   │   │   │   ├── train_197.hi
+│   │   │   │   ├── train_198.en
+│   │   │   │   ├── train_198.hi
+│   │   │   │   ├── train_199.en
+│   │   │   │   ├── train_199.hi
+│   │   │   │   ├── train_19.en
+│   │   │   │   ├── train_19.hi
+│   │   │   │   ├── train_1.en
+│   │   │   │   ├── train_1.hi
+│   │   │   │   ├── train_200.en
+│   │   │   │   ├── train_200.hi
+│   │   │   │   ├── train_201.en
+│   │   │   │   ├── train_201.hi
+│   │   │   │   ├── train_202.en
+│   │   │   │   ├── train_202.hi
+│   │   │   │   ├── train_203.en
+│   │   │   │   ├── train_203.hi
+│   │   │   │   ├── train_204.en
+│   │   │   │   ├── train_204.hi
+│   │   │   │   ├── train_205.en
+│   │   │   │   ├── train_205.hi
+│   │   │   │   ├── train_206.en
+│   │   │   │   ├── train_206.hi
+│   │   │   │   ├── train_207.en
+│   │   │   │   ├── train_207.hi
+│   │   │   │   ├── train_208.en
+│   │   │   │   ├── train_208.hi
+│   │   │   │   ├── train_209.en
+│   │   │   │   ├── train_209.hi
+│   │   │   │   ├── train_20.en
+│   │   │   │   ├── train_20.hi
+│   │   │   │   ├── train_210.en
+│   │   │   │   ├── train_210.hi
+│   │   │   │   ├── train_211.en
+│   │   │   │   ├── train_211.hi
+│   │   │   │   ├── train_212.en
+│   │   │   │   ├── train_212.hi
+│   │   │   │   ├── train_213.en
+│   │   │   │   ├── train_213.hi
+│   │   │   │   ├── train_214.en
+│   │   │   │   ├── train_214.hi
+│   │   │   │   ├── train_215.en
+│   │   │   │   ├── train_215.hi
+│   │   │   │   ├── train_216.en
+│   │   │   │   ├── train_216.hi
+│   │   │   │   ├── train_217.en
+│   │   │   │   ├── train_217.hi
+│   │   │   │   ├── train_218.en
+│   │   │   │   ├── train_218.hi
+│   │   │   │   ├── train_219.en
+│   │   │   │   ├── train_219.hi
+│   │   │   │   ├── train_21.en
+│   │   │   │   ├── train_21.hi
+│   │   │   │   ├── train_220.en
+│   │   │   │   ├── train_220.hi
+│   │   │   │   ├── train_221.en
+│   │   │   │   ├── train_221.hi
+│   │   │   │   ├── train_222.en
+│   │   │   │   ├── train_222.hi
+│   │   │   │   ├── train_223.en
+│   │   │   │   ├── train_223.hi
+│   │   │   │   ├── train_224.en
+│   │   │   │   ├── train_224.hi
+│   │   │   │   ├── train_225.en
+│   │   │   │   ├── train_225.hi
+│   │   │   │   ├── train_226.en
+│   │   │   │   ├── train_226.hi
+│   │   │   │   ├── train_227.en
+│   │   │   │   ├── train_227.hi
+│   │   │   │   ├── train_228.en
+│   │   │   │   ├── train_228.hi
+│   │   │   │   ├── train_229.en
+│   │   │   │   ├── train_229.hi
+│   │   │   │   ├── train_22.en
+│   │   │   │   ├── train_22.hi
+│   │   │   │   ├── train_230.en
+│   │   │   │   ├── train_230.hi
+│   │   │   │   ├── train_231.en
+│   │   │   │   ├── train_231.hi
+│   │   │   │   ├── train_232.en
+│   │   │   │   ├── train_232.hi
+│   │   │   │   ├── train_233.en
+│   │   │   │   ├── train_233.hi
+│   │   │   │   ├── train_234.en
+│   │   │   │   ├── train_234.hi
+│   │   │   │   ├── train_235.en
+│   │   │   │   ├── train_235.hi
+│   │   │   │   ├── train_236.en
+│   │   │   │   ├── train_236.hi
+│   │   │   │   ├── train_237.en
+│   │   │   │   ├── train_237.hi
+│   │   │   │   ├── train_238.en
+│   │   │   │   ├── train_238.hi
+│   │   │   │   ├── train_239.en
+│   │   │   │   ├── train_239.hi
+│   │   │   │   ├── train_23.en
+│   │   │   │   ├── train_23.hi
+│   │   │   │   ├── train_240.en
+│   │   │   │   ├── train_240.hi
+│   │   │   │   ├── train_241.en
+│   │   │   │   ├── train_241.hi
+│   │   │   │   ├── train_242.en
+│   │   │   │   ├── train_242.hi
+│   │   │   │   ├── train_243.en
+│   │   │   │   ├── train_243.hi
+│   │   │   │   ├── train_244.en
+│   │   │   │   ├── train_244.hi
+│   │   │   │   ├── train_245.en
+│   │   │   │   ├── train_245.hi
+│   │   │   │   ├── train_246.en
+│   │   │   │   ├── train_246.hi
+│   │   │   │   ├── train_247.en
+│   │   │   │   ├── train_247.hi
+│   │   │   │   ├── train_248.en
+│   │   │   │   ├── train_248.hi
+│   │   │   │   ├── train_249.en
+│   │   │   │   ├── train_249.hi
+│   │   │   │   ├── train_24.en
+│   │   │   │   ├── train_24.hi
+│   │   │   │   ├── train_250.en
+│   │   │   │   ├── train_250.hi
+│   │   │   │   ├── train_251.en
+│   │   │   │   ├── train_251.hi
+│   │   │   │   ├── train_252.en
+│   │   │   │   ├── train_252.hi
+│   │   │   │   ├── train_253.en
+│   │   │   │   ├── train_253.hi
+│   │   │   │   ├── train_254.en
+│   │   │   │   ├── train_254.hi
+│   │   │   │   ├── train_255.en
+│   │   │   │   ├── train_255.hi
+│   │   │   │   ├── train_256.en
+│   │   │   │   ├── train_256.hi
+│   │   │   │   ├── train_257.en
+│   │   │   │   ├── train_257.hi
+│   │   │   │   ├── train_258.en
+│   │   │   │   ├── train_258.hi
+│   │   │   │   ├── train_259.en
+│   │   │   │   ├── train_259.hi
+│   │   │   │   ├── train_25.en
+│   │   │   │   ├── train_25.hi
+│   │   │   │   ├── train_260.en
+│   │   │   │   ├── train_260.hi
+│   │   │   │   ├── train_261.en
+│   │   │   │   ├── train_261.hi
+│   │   │   │   ├── train_262.en
+│   │   │   │   ├── train_262.hi
+│   │   │   │   ├── train_263.en
+│   │   │   │   ├── train_263.hi
+│   │   │   │   ├── train_264.en
+│   │   │   │   ├── train_264.hi
+│   │   │   │   ├── train_265.en
+│   │   │   │   ├── train_265.hi
+│   │   │   │   ├── train_266.en
+│   │   │   │   ├── train_266.hi
+│   │   │   │   ├── train_267.en
+│   │   │   │   ├── train_267.hi
+│   │   │   │   ├── train_268.en
+│   │   │   │   ├── train_268.hi
+│   │   │   │   ├── train_269.en
+│   │   │   │   ├── train_269.hi
+│   │   │   │   ├── train_26.en
+│   │   │   │   ├── train_26.hi
+│   │   │   │   ├── train_270.en
+│   │   │   │   ├── train_270.hi
+│   │   │   │   ├── train_271.en
+│   │   │   │   ├── train_271.hi
+│   │   │   │   ├── train_272.en
+│   │   │   │   ├── train_272.hi
+│   │   │   │   ├── train_273.en
+│   │   │   │   ├── train_273.hi
+│   │   │   │   ├── train_274.en
+│   │   │   │   ├── train_274.hi
+│   │   │   │   ├── train_275.en
+│   │   │   │   ├── train_275.hi
+│   │   │   │   ├── train_276.en
+│   │   │   │   ├── train_276.hi
+│   │   │   │   ├── train_277.en
+│   │   │   │   ├── train_277.hi
+│   │   │   │   ├── train_278.en
+│   │   │   │   ├── train_278.hi
+│   │   │   │   ├── train_279.en
+│   │   │   │   ├── train_279.hi
+│   │   │   │   ├── train_27.en
+│   │   │   │   ├── train_27.hi
+│   │   │   │   ├── train_280.en
+│   │   │   │   ├── train_280.hi
+│   │   │   │   ├── train_281.en
+│   │   │   │   ├── train_281.hi
+│   │   │   │   ├── train_282.en
+│   │   │   │   ├── train_282.hi
+│   │   │   │   ├── train_283.en
+│   │   │   │   ├── train_283.hi
+│   │   │   │   ├── train_284.en
+│   │   │   │   ├── train_284.hi
+│   │   │   │   ├── train_285.en
+│   │   │   │   ├── train_285.hi
+│   │   │   │   ├── train_286.en
+│   │   │   │   ├── train_286.hi
+│   │   │   │   ├── train_287.en
+│   │   │   │   ├── train_287.hi
+│   │   │   │   ├── train_288.en
+│   │   │   │   ├── train_288.hi
+│   │   │   │   ├── train_289.en
+│   │   │   │   ├── train_289.hi
+│   │   │   │   ├── train_28.en
+│   │   │   │   ├── train_28.hi
+│   │   │   │   ├── train_290.en
+│   │   │   │   ├── train_290.hi
+│   │   │   │   ├── train_291.en
+│   │   │   │   ├── train_291.hi
+│   │   │   │   ├── train_292.en
+│   │   │   │   ├── train_292.hi
+│   │   │   │   ├── train_293.en
+│   │   │   │   ├── train_293.hi
+│   │   │   │   ├── train_294.en
+│   │   │   │   ├── train_294.hi
+│   │   │   │   ├── train_295.en
+│   │   │   │   ├── train_295.hi
+│   │   │   │   ├── train_296.en
+│   │   │   │   ├── train_296.hi
+│   │   │   │   ├── train_297.en
+│   │   │   │   ├── train_297.hi
+│   │   │   │   ├── train_298.en
+│   │   │   │   ├── train_298.hi
+│   │   │   │   ├── train_299.en
+│   │   │   │   ├── train_299.hi
+│   │   │   │   ├── train_29.en
+│   │   │   │   ├── train_29.hi
+│   │   │   │   ├── train_2.en
+│   │   │   │   ├── train_2.hi
+│   │   │   │   ├── train_300.en
+│   │   │   │   ├── train_300.hi
+│   │   │   │   ├── train_301.en
+│   │   │   │   ├── train_301.hi
+│   │   │   │   ├── train_302.en
+│   │   │   │   ├── train_302.hi
+│   │   │   │   ├── train_303.en
+│   │   │   │   ├── train_303.hi
+│   │   │   │   ├── train_304.en
+│   │   │   │   ├── train_304.hi
+│   │   │   │   ├── train_305.en
+│   │   │   │   ├── train_305.hi
+│   │   │   │   ├── train_306.en
+│   │   │   │   ├── train_306.hi
+│   │   │   │   ├── train_307.en
+│   │   │   │   ├── train_307.hi
+│   │   │   │   ├── train_308.en
+│   │   │   │   ├── train_308.hi
+│   │   │   │   ├── train_309.en
+│   │   │   │   ├── train_309.hi
+│   │   │   │   ├── train_30.en
+│   │   │   │   ├── train_30.hi
+│   │   │   │   ├── train_310.en
+│   │   │   │   ├── train_310.hi
+│   │   │   │   ├── train_311.en
+│   │   │   │   ├── train_311.hi
+│   │   │   │   ├── train_312.en
+│   │   │   │   ├── train_312.hi
+│   │   │   │   ├── train_313.en
+│   │   │   │   ├── train_313.hi
+│   │   │   │   ├── train_314.en
+│   │   │   │   ├── train_314.hi
+│   │   │   │   ├── train_315.en
+│   │   │   │   ├── train_315.hi
+│   │   │   │   ├── train_316.en
+│   │   │   │   ├── train_316.hi
+│   │   │   │   ├── train_317.en
+│   │   │   │   ├── train_317.hi
+│   │   │   │   ├── train_318.en
+│   │   │   │   ├── train_318.hi
+│   │   │   │   ├── train_319.en
+│   │   │   │   ├── train_319.hi
+│   │   │   │   ├── train_31.en
+│   │   │   │   ├── train_31.hi
+│   │   │   │   ├── train_320.en
+│   │   │   │   ├── train_320.hi
+│   │   │   │   ├── train_321.en
+│   │   │   │   ├── train_321.hi
+│   │   │   │   ├── train_322.en
+│   │   │   │   ├── train_322.hi
+│   │   │   │   ├── train_323.en
+│   │   │   │   ├── train_323.hi
+│   │   │   │   ├── train_324.en
+│   │   │   │   ├── train_324.hi
+│   │   │   │   ├── train_325.en
+│   │   │   │   ├── train_325.hi
+│   │   │   │   ├── train_326.en
+│   │   │   │   ├── train_326.hi
+│   │   │   │   ├── train_327.en
+│   │   │   │   ├── train_327.hi
+│   │   │   │   ├── train_328.en
+│   │   │   │   ├── train_328.hi
+│   │   │   │   ├── train_329.en
+│   │   │   │   ├── train_329.hi
+│   │   │   │   ├── train_32.en
+│   │   │   │   ├── train_32.hi
+│   │   │   │   ├── train_330.en
+│   │   │   │   ├── train_330.hi
+│   │   │   │   ├── train_331.en
+│   │   │   │   ├── train_331.hi
+│   │   │   │   ├── train_33.en
+│   │   │   │   ├── train_33.hi
+│   │   │   │   ├── train_34.en
+│   │   │   │   ├── train_34.hi
+│   │   │   │   ├── train_35.en
+│   │   │   │   ├── train_35.hi
+│   │   │   │   ├── train_36.en
+│   │   │   │   ├── train_36.hi
+│   │   │   │   ├── train_37.en
+│   │   │   │   ├── train_37.hi
+│   │   │   │   ├── train_38.en
+│   │   │   │   ├── train_38.hi
+│   │   │   │   ├── train_39.en
+│   │   │   │   ├── train_39.hi
+│   │   │   │   ├── train_3.en
+│   │   │   │   ├── train_3.hi
+│   │   │   │   ├── train_40.en
+│   │   │   │   ├── train_40.hi
+│   │   │   │   ├── train_41.en
+│   │   │   │   ├── train_41.hi
+│   │   │   │   ├── train_42.en
+│   │   │   │   ├── train_42.hi
+│   │   │   │   ├── train_43.en
+│   │   │   │   ├── train_43.hi
+│   │   │   │   ├── train_44.en
+│   │   │   │   ├── train_44.hi
+│   │   │   │   ├── train_45.en
+│   │   │   │   ├── train_45.hi
+│   │   │   │   ├── train_46.en
+│   │   │   │   ├── train_46.hi
+│   │   │   │   ├── train_47.en
+│   │   │   │   ├── train_47.hi
+│   │   │   │   ├── train_48.en
+│   │   │   │   ├── train_48.hi
+│   │   │   │   ├── train_49.en
+│   │   │   │   ├── train_49.hi
+│   │   │   │   ├── train_4.en
+│   │   │   │   ├── train_4.hi
+│   │   │   │   ├── train_50.en
+│   │   │   │   ├── train_50.hi
+│   │   │   │   ├── train_51.en
+│   │   │   │   ├── train_51.hi
+│   │   │   │   ├── train_52.en
+│   │   │   │   ├── train_52.hi
+│   │   │   │   ├── train_53.en
+│   │   │   │   ├── train_53.hi
+│   │   │   │   ├── train_54.en
+│   │   │   │   ├── train_54.hi
+│   │   │   │   ├── train_55.en
+│   │   │   │   ├── train_55.hi
+│   │   │   │   ├── train_56.en
+│   │   │   │   ├── train_56.hi
+│   │   │   │   ├── train_57.en
+│   │   │   │   ├── train_57.hi
+│   │   │   │   ├── train_58.en
+│   │   │   │   ├── train_58.hi
+│   │   │   │   ├── train_59.en
+│   │   │   │   ├── train_59.hi
+│   │   │   │   ├── train_5.en
+│   │   │   │   ├── train_5.hi
+│   │   │   │   ├── train_60.en
+│   │   │   │   ├── train_60.hi
+│   │   │   │   ├── train_61.en
+│   │   │   │   ├── train_61.hi
+│   │   │   │   ├── train_62.en
+│   │   │   │   ├── train_62.hi
+│   │   │   │   ├── train_63.en
+│   │   │   │   ├── train_63.hi
+│   │   │   │   ├── train_64.en
+│   │   │   │   ├── train_64.hi
+│   │   │   │   ├── train_65.en
+│   │   │   │   ├── train_65.hi
+│   │   │   │   ├── train_66.en
+│   │   │   │   ├── train_66.hi
+│   │   │   │   ├── train_67.en
+│   │   │   │   ├── train_67.hi
+│   │   │   │   ├── train_68.en
+│   │   │   │   ├── train_68.hi
+│   │   │   │   ├── train_69.en
+│   │   │   │   ├── train_69.hi
+│   │   │   │   ├── train_6.en
+│   │   │   │   ├── train_6.hi
+│   │   │   │   ├── train_70.en
+│   │   │   │   ├── train_70.hi
+│   │   │   │   ├── train_71.en
+│   │   │   │   ├── train_71.hi
+│   │   │   │   ├── train_72.en
+│   │   │   │   ├── train_72.hi
+│   │   │   │   ├── train_73.en
+│   │   │   │   ├── train_73.hi
+│   │   │   │   ├── train_74.en
+│   │   │   │   ├── train_74.hi
+│   │   │   │   ├── train_75.en
+│   │   │   │   ├── train_75.hi
+│   │   │   │   ├── train_76.en
+│   │   │   │   ├── train_76.hi
+│   │   │   │   ├── train_77.en
+│   │   │   │   ├── train_77.hi
+│   │   │   │   ├── train_78.en
+│   │   │   │   ├── train_78.hi
+│   │   │   │   ├── train_79.en
+│   │   │   │   ├── train_79.hi
+│   │   │   │   ├── train_7.en
+│   │   │   │   ├── train_7.hi
+│   │   │   │   ├── train_80.en
+│   │   │   │   ├── train_80.hi
+│   │   │   │   ├── train_81.en
+│   │   │   │   ├── train_81.hi
+│   │   │   │   ├── train_82.en
+│   │   │   │   ├── train_82.hi
+│   │   │   │   ├── train_83.en
+│   │   │   │   ├── train_83.hi
+│   │   │   │   ├── train_84.en
+│   │   │   │   ├── train_84.hi
+│   │   │   │   ├── train_85.en
+│   │   │   │   ├── train_85.hi
+│   │   │   │   ├── train_86.en
+│   │   │   │   ├── train_86.hi
+│   │   │   │   ├── train_87.en
+│   │   │   │   ├── train_87.hi
+│   │   │   │   ├── train_88.en
+│   │   │   │   ├── train_88.hi
+│   │   │   │   ├── train_89.en
+│   │   │   │   ├── train_89.hi
+│   │   │   │   ├── train_8.en
+│   │   │   │   ├── train_8.hi
+│   │   │   │   ├── train_90.en
+│   │   │   │   ├── train_90.hi
+│   │   │   │   ├── train_91.en
+│   │   │   │   ├── train_91.hi
+│   │   │   │   ├── train_92.en
+│   │   │   │   ├── train_92.hi
+│   │   │   │   ├── train_93.en
+│   │   │   │   ├── train_93.hi
+│   │   │   │   ├── train_94.en
+│   │   │   │   ├── train_94.hi
+│   │   │   │   ├── train_95.en
+│   │   │   │   ├── train_95.hi
+│   │   │   │   ├── train_96.en
+│   │   │   │   ├── train_96.hi
+│   │   │   │   ├── train_97.en
+│   │   │   │   ├── train_97.hi
+│   │   │   │   ├── train_98.en
+│   │   │   │   ├── train_98.hi
+│   │   │   │   ├── train_99.en
+│   │   │   │   ├── train_99.hi
+│   │   │   │   ├── train_9.en
+│   │   │   │   └── train_9.hi
+│   │   │   └── tokenized
+│   │   │       ├── hft_pretokenized.en
+│   │   │       ├── hft_pretokenized.hi
+│   │   │       ├── toks_en_bpe_0.5k.en
+│   │   │       ├── toks_en_bpe_1.0k.en
+│   │   │       ├── toks_en_bpe_16.0k.en
+│   │   │       ├── toks_en_bpe_2.0k.en
+│   │   │       ├── toks_en_bpe_32.0k.en
+│   │   │       ├── toks_en_bpe_4.0k.en
+│   │   │       ├── toks_en_bpe_8.0k.en
+│   │   │       ├── toks_en_char_0.785k.en
+│   │   │       ├── toks_en_hft_0.5k.en
+│   │   │       ├── toks_en_hft_0.75k.en
+│   │   │       ├── toks_en_hft_1.5k.en
+│   │   │       ├── toks_en_hft_3.0k.en
+│   │   │       ├── toks_en_hft_4.0k.en
+│   │   │       ├── toks_en_hft_6.0k.en
+│   │   │       ├── toks_en_hft_8.0k.en
+│   │   │       ├── toks_en_unigram_0.5k.en
+│   │   │       ├── toks_en_unigram_0.75k.en
+│   │   │       ├── toks_en_unigram_1.5k.en
+│   │   │       ├── toks_en_unigram_3.0k.en
+│   │   │       ├── toks_en_unigram_4.0k.en
+│   │   │       ├── toks_en_unigram_6.0k.en
+│   │   │       ├── toks_en_unigram_8.0k.en
+│   │   │       ├── toks_hi_bpe_0.5k.hi
+│   │   │       ├── toks_hi_bpe_1.0k.hi
+│   │   │       ├── toks_hi_bpe_16.0k.hi
+│   │   │       ├── toks_hi_bpe_2.0k.hi
+│   │   │       ├── toks_hi_bpe_32.0k.hi
+│   │   │       ├── toks_hi_bpe_4.0k.hi
+│   │   │       ├── toks_hi_bpe_8.0k.hi
+│   │   │       ├── toks_hi_char_0.785k.hi
+│   │   │       ├── toks_hi_hft_0.5k.hi
+│   │   │       ├── toks_hi_hft_0.75k.hi
+│   │   │       ├── toks_hi_hft_1.5k.hi
+│   │   │       ├── toks_hi_hft_3.0k.hi
+│   │   │       ├── toks_hi_hft_4.0k.hi
+│   │   │       ├── toks_hi_hft_6.0k.hi
+│   │   │       ├── toks_hi_hft_8.0k.hi
+│   │   │       ├── toks_hi_unigram_0.5k.hi
+│   │   │       ├── toks_hi_unigram_0.75k.hi
+│   │   │       ├── toks_hi_unigram_1.5k.hi
+│   │   │       ├── toks_hi_unigram_3.0k.hi
+│   │   │       ├── toks_hi_unigram_4.0k.hi
+│   │   │       ├── toks_hi_unigram_6.0k.hi
+│   │   │       └── toks_hi_unigram_8.0k.hi
+│   │   ├── train.en
+│   │   └── train.hi
+│   └── en_lt
+│       ├── train
+│       │   ├── text
+│       │   │   ├── train_0.en
+│       │   │   ├── train_0.lt
+│       │   │   ├── train_100.en
+│       │   │   ├── train_100.lt
+│       │   │   ├── train_101.en
+│       │   │   ├── train_101.lt
+│       │   │   ├── train_102.en
+│       │   │   ├── train_102.lt
+│       │   │   ├── train_103.en
+│       │   │   ├── train_103.lt
+│       │   │   ├── train_104.en
+│       │   │   ├── train_104.lt
+│       │   │   ├── train_105.en
+│       │   │   ├── train_105.lt
+│       │   │   ├── train_106.en
+│       │   │   ├── train_106.lt
+│       │   │   ├── train_107.en
+│       │   │   ├── train_107.lt
+│       │   │   ├── train_108.en
+│       │   │   ├── train_108.lt
+│       │   │   ├── train_109.en
+│       │   │   ├── train_109.lt
+│       │   │   ├── train_10.en
+│       │   │   ├── train_10.lt
+│       │   │   ├── train_110.en
+│       │   │   ├── train_110.lt
+│       │   │   ├── train_111.en
+│       │   │   ├── train_111.lt
+│       │   │   ├── train_112.en
+│       │   │   ├── train_112.lt
+│       │   │   ├── train_113.en
+│       │   │   ├── train_113.lt
+│       │   │   ├── train_114.en
+│       │   │   ├── train_114.lt
+│       │   │   ├── train_115.en
+│       │   │   ├── train_115.lt
+│       │   │   ├── train_116.en
+│       │   │   ├── train_116.lt
+│       │   │   ├── train_117.en
+│       │   │   ├── train_117.lt
+│       │   │   ├── train_118.en
+│       │   │   ├── train_118.lt
+│       │   │   ├── train_119.en
+│       │   │   ├── train_119.lt
+│       │   │   ├── train_11.en
+│       │   │   ├── train_11.lt
+│       │   │   ├── train_120.en
+│       │   │   ├── train_120.lt
+│       │   │   ├── train_121.en
+│       │   │   ├── train_121.lt
+│       │   │   ├── train_122.en
+│       │   │   ├── train_122.lt
+│       │   │   ├── train_123.en
+│       │   │   ├── train_123.lt
+│       │   │   ├── train_124.en
+│       │   │   ├── train_124.lt
+│       │   │   ├── train_125.en
+│       │   │   ├── train_125.lt
+│       │   │   ├── train_126.en
+│       │   │   ├── train_126.lt
+│       │   │   ├── train_127.en
+│       │   │   ├── train_127.lt
+│       │   │   ├── train_12.en
+│       │   │   ├── train_12.lt
+│       │   │   ├── train_13.en
+│       │   │   ├── train_13.lt
+│       │   │   ├── train_14.en
+│       │   │   ├── train_14.lt
+│       │   │   ├── train_15.en
+│       │   │   ├── train_15.lt
+│       │   │   ├── train_16.en
+│       │   │   ├── train_16.lt
+│       │   │   ├── train_17.en
+│       │   │   ├── train_17.lt
+│       │   │   ├── train_18.en
+│       │   │   ├── train_18.lt
+│       │   │   ├── train_19.en
+│       │   │   ├── train_19.lt
+│       │   │   ├── train_1.en
+│       │   │   ├── train_1.lt
+│       │   │   ├── train_20.en
+│       │   │   ├── train_20.lt
+│       │   │   ├── train_21.en
+│       │   │   ├── train_21.lt
+│       │   │   ├── train_22.en
+│       │   │   ├── train_22.lt
+│       │   │   ├── train_23.en
+│       │   │   ├── train_23.lt
+│       │   │   ├── train_24.en
+│       │   │   ├── train_24.lt
+│       │   │   ├── train_25.en
+│       │   │   ├── train_25.lt
+│       │   │   ├── train_26.en
+│       │   │   ├── train_26.lt
+│       │   │   ├── train_27.en
+│       │   │   ├── train_27.lt
+│       │   │   ├── train_28.en
+│       │   │   ├── train_28.lt
+│       │   │   ├── train_29.en
+│       │   │   ├── train_29.lt
+│       │   │   ├── train_2.en
+│       │   │   ├── train_2.lt
+│       │   │   ├── train_30.en
+│       │   │   ├── train_30.lt
+│       │   │   ├── train_31.en
+│       │   │   ├── train_31.lt
+│       │   │   ├── train_32.en
+│       │   │   ├── train_32.lt
+│       │   │   ├── train_33.en
+│       │   │   ├── train_33.lt
+│       │   │   ├── train_34.en
+│       │   │   ├── train_34.lt
+│       │   │   ├── train_35.en
+│       │   │   ├── train_35.lt
+│       │   │   ├── train_36.en
+│       │   │   ├── train_36.lt
+│       │   │   ├── train_37.en
+│       │   │   ├── train_37.lt
+│       │   │   ├── train_38.en
+│       │   │   ├── train_38.lt
+│       │   │   ├── train_39.en
+│       │   │   ├── train_39.lt
+│       │   │   ├── train_3.en
+│       │   │   ├── train_3.lt
+│       │   │   ├── train_40.en
+│       │   │   ├── train_40.lt
+│       │   │   ├── train_41.en
+│       │   │   ├── train_41.lt
+│       │   │   ├── train_42.en
+│       │   │   ├── train_42.lt
+│       │   │   ├── train_43.en
+│       │   │   ├── train_43.lt
+│       │   │   ├── train_44.en
+│       │   │   ├── train_44.lt
+│       │   │   ├── train_45.en
+│       │   │   ├── train_45.lt
+│       │   │   ├── train_46.en
+│       │   │   ├── train_46.lt
+│       │   │   ├── train_47.en
+│       │   │   ├── train_47.lt
+│       │   │   ├── train_48.en
+│       │   │   ├── train_48.lt
+│       │   │   ├── train_49.en
+│       │   │   ├── train_49.lt
+│       │   │   ├── train_4.en
+│       │   │   ├── train_4.lt
+│       │   │   ├── train_50.en
+│       │   │   ├── train_50.lt
+│       │   │   ├── train_51.en
+│       │   │   ├── train_51.lt
+│       │   │   ├── train_52.en
+│       │   │   ├── train_52.lt
+│       │   │   ├── train_53.en
+│       │   │   ├── train_53.lt
+│       │   │   ├── train_54.en
+│       │   │   ├── train_54.lt
+│       │   │   ├── train_55.en
+│       │   │   ├── train_55.lt
+│       │   │   ├── train_56.en
+│       │   │   ├── train_56.lt
+│       │   │   ├── train_57.en
+│       │   │   ├── train_57.lt
+│       │   │   ├── train_58.en
+│       │   │   ├── train_58.lt
+│       │   │   ├── train_59.en
+│       │   │   ├── train_59.lt
+│       │   │   ├── train_5.en
+│       │   │   ├── train_5.lt
+│       │   │   ├── train_60.en
+│       │   │   ├── train_60.lt
+│       │   │   ├── train_61.en
+│       │   │   ├── train_61.lt
+│       │   │   ├── train_62.en
+│       │   │   ├── train_62.lt
+│       │   │   ├── train_63.en
+│       │   │   ├── train_63.lt
+│       │   │   ├── train_64.en
+│       │   │   ├── train_64.lt
+│       │   │   ├── train_65.en
+│       │   │   ├── train_65.lt
+│       │   │   ├── train_66.en
+│       │   │   ├── train_66.lt
+│       │   │   ├── train_67.en
+│       │   │   ├── train_67.lt
+│       │   │   ├── train_68.en
+│       │   │   ├── train_68.lt
+│       │   │   ├── train_69.en
+│       │   │   ├── train_69.lt
+│       │   │   ├── train_6.en
+│       │   │   ├── train_6.lt
+│       │   │   ├── train_70.en
+│       │   │   ├── train_70.lt
+│       │   │   ├── train_71.en
+│       │   │   ├── train_71.lt
+│       │   │   ├── train_72.en
+│       │   │   ├── train_72.lt
+│       │   │   ├── train_73.en
+│       │   │   ├── train_73.lt
+│       │   │   ├── train_74.en
+│       │   │   ├── train_74.lt
+│       │   │   ├── train_75.en
+│       │   │   ├── train_75.lt
+│       │   │   ├── train_76.en
+│       │   │   ├── train_76.lt
+│       │   │   ├── train_77.en
+│       │   │   ├── train_77.lt
+│       │   │   ├── train_78.en
+│       │   │   ├── train_78.lt
+│       │   │   ├── train_79.en
+│       │   │   ├── train_79.lt
+│       │   │   ├── train_7.en
+│       │   │   ├── train_7.lt
+│       │   │   ├── train_80.en
+│       │   │   ├── train_80.lt
+│       │   │   ├── train_81.en
+│       │   │   ├── train_81.lt
+│       │   │   ├── train_82.en
+│       │   │   ├── train_82.lt
+│       │   │   ├── train_83.en
+│       │   │   ├── train_83.lt
+│       │   │   ├── train_84.en
+│       │   │   ├── train_84.lt
+│       │   │   ├── train_85.en
+│       │   │   ├── train_85.lt
+│       │   │   ├── train_86.en
+│       │   │   ├── train_86.lt
+│       │   │   ├── train_87.en
+│       │   │   ├── train_87.lt
+│       │   │   ├── train_88.en
+│       │   │   ├── train_88.lt
+│       │   │   ├── train_89.en
+│       │   │   ├── train_89.lt
+│       │   │   ├── train_8.en
+│       │   │   ├── train_8.lt
+│       │   │   ├── train_90.en
+│       │   │   ├── train_90.lt
+│       │   │   ├── train_91.en
+│       │   │   ├── train_91.lt
+│       │   │   ├── train_92.en
+│       │   │   ├── train_92.lt
+│       │   │   ├── train_93.en
+│       │   │   ├── train_93.lt
+│       │   │   ├── train_94.en
+│       │   │   ├── train_94.lt
+│       │   │   ├── train_95.en
+│       │   │   ├── train_95.lt
+│       │   │   ├── train_96.en
+│       │   │   ├── train_96.lt
+│       │   │   ├── train_97.en
+│       │   │   ├── train_97.lt
+│       │   │   ├── train_98.en
+│       │   │   ├── train_98.lt
+│       │   │   ├── train_99.en
+│       │   │   ├── train_99.lt
+│       │   │   ├── train_9.en
+│       │   │   └── train_9.lt
+│       │   └── tokenized
+│       │       ├── hft_pretokenized.en
+│       │       ├── hft_pretokenized.lt
+│       │       ├── toks_en_bpe_0.5k.en
+│       │       ├── toks_en_bpe_1.0k.en
+│       │       ├── toks_en_bpe_16.0k.en
+│       │       ├── toks_en_bpe_2.0k.en
+│       │       ├── toks_en_bpe_32.0k.en
+│       │       ├── toks_en_bpe_4.0k.en
+│       │       ├── toks_en_bpe_8.0k.en
+│       │       ├── toks_en_char_0.24k.en
+│       │       ├── toks_en_hft_0.5k.en
+│       │       ├── toks_en_hft_0.75k.en
+│       │       ├── toks_en_hft_1.5k.en
+│       │       ├── toks_en_hft_3.0k.en
+│       │       ├── toks_en_hft_4.0k.en
+│       │       ├── toks_en_hft_6.0k.en
+│       │       ├── toks_en_hft_8.0k.en
+│       │       ├── toks_en_unigram_0.5k.en
+│       │       ├── toks_en_unigram_0.75k.en
+│       │       ├── toks_en_unigram_1.5k.en
+│       │       ├── toks_en_unigram_3.0k.en
+│       │       ├── toks_en_unigram_4.0k.en
+│       │       ├── toks_en_unigram_6.0k.en
+│       │       ├── toks_en_unigram_8.0k.en
+│       │       ├── toks_lt_bpe_0.5k.lt
+│       │       ├── toks_lt_bpe_1.0k.lt
+│       │       ├── toks_lt_bpe_16.0k.lt
+│       │       ├── toks_lt_bpe_2.0k.lt
+│       │       ├── toks_lt_bpe_32.0k.lt
+│       │       ├── toks_lt_bpe_4.0k.lt
+│       │       ├── toks_lt_bpe_8.0k.lt
+│       │       ├── toks_lt_char_0.24k.lt
+│       │       ├── toks_lt_char_0.262k.lt
+│       │       ├── toks_lt_hft_0.5k.lt
+│       │       ├── toks_lt_hft_0.75k.lt
+│       │       ├── toks_lt_hft_1.5k.lt
+│       │       ├── toks_lt_hft_3.0k.lt
+│       │       ├── toks_lt_hft_4.0k.lt
+│       │       ├── toks_lt_hft_6.0k.lt
+│       │       ├── toks_lt_hft_8.0k.lt
+│       │       ├── toks_lt_unigram_0.5k.lt
+│       │       ├── toks_lt_unigram_0.75k.lt
+│       │       ├── toks_lt_unigram_1.5k.lt
+│       │       ├── toks_lt_unigram_3.0k.lt
+│       │       ├── toks_lt_unigram_4.0k.lt
+│       │       ├── toks_lt_unigram_6.0k.lt
+│       │       └── toks_lt_unigram_8.0k.lt
+│       ├── train.en
+│       └── train.lt
+├── detokenize
+├── hftoks.py
+├── LICENSE
+├── LICENSE.txt
+├── papers
+│   ├── howmuch.pdf
+│   ├── impatturk.pdf
+│   ├── jointopt.pdf
+│   ├── optimizing_granularity_for_nmt.pdf
+│   ├── Optimizing Word Alignments with Better Subword Tokenization.pdf
+│   ├── optok.pdf
+│   ├── sentpiece.pdf
+│   ├── subwordreg.pdf
+│   ├── vocab_free_tokenizer.pdf
+│   └── voc_size_for_nmt.pdf
+├── plots
+│   ├── avg_len_big.png
+│   ├── avg_len_lores.png
+│   ├── freq@95%_big.png
+│   ├── freq@95%_en_ga.png
+│   ├── freq@95%_en_hi.png
+│   ├── freq@95%_en_lt.png
+│   ├── freq@95%_en_mr.png
+│   ├── freq@95%_lores.png
+│   ├── freq@95%_small.png
+│   ├── token_time_big.png
+│   ├── token_time_lores.png
+│   ├── token_time_small.png
+│   ├── train_time_big.png
+│   ├── train_time_lores.png
+│   └── train_time_small.png
+├── plot_test.ipynb
+├── pretokenize
+├── README.md
+├── stats
+│   ├── en_ga.csv
+│   ├── en_hi.csv
+│   ├── en_lt.csv
+│   ├── en_mr.csv
+│   ├── freqlen_stats_big.csv
+│   ├── freqlen_stats_small.csv
+│   ├── time_stats_big.csv
+│   └── time_stats_small.csv
+├── stats_backup
+│   ├── df_test2.csv
+│   ├── df_test.csv
+│   ├── en_hi.csv
+│   ├── lt_en.csv
+│   ├── run_1657114126.5525415.csv
+│   ├── run_1657114209.4375005.csv
+│   ├── run_1657115802.7804897.csv
+│   ├── run_1657118137.3621974.csv
+│   ├── run_1657119007.688981.csv
+│   ├── run_1657119056.4498382.csv
+│   ├── run_1657119133.8549774.csv
+│   ├── run_1657119246.529915.csv
+│   ├── run_1657119623.9358883.csv
+│   ├── run_1657120118.7084997.csv
+│   ├── run_1657121265.6346695.csv
+│   ├── run_1657200261.319748.csv
+│   ├── run_1657205321.6736999.csv
+│   ├── run_1657272304.9757936.csv
+│   ├── run_1657273654.0555456.csv
+│   ├── run_1657275272.083034.csv
+│   ├── run_1657280591.919089.csv
+│   ├── run_1657287022.6711056.csv
+│   ├── run_1657287468.1828804.csv
+│   ├── run_1657288142.642322.csv
+│   ├── run_1657288506.9080892.csv
+│   ├── run_1657289083.5391898.csv
+│   ├── run_1657290627.7977648.csv
+│   ├── run_1657360689.025768.csv
+│   ├── run_1657361556.5536013.csv
+│   ├── run_1657368936.7612984.csv
+│   ├── run_1657527345.7444348.csv
+│   ├── run_1657621016.7754169.csv
+│   ├── run_1657621307.504177.csv
+│   ├── run_1657622548.8785267.csv
+│   ├── run_1657629564.541784.csv
+│   ├── run_1657629714.2855427.csv
+│   ├── run_1657631532.7015133.csv
+│   ├── run_1657631779.764956.csv
+│   └── run_1657632771.2763996.csv
+├── tokenizers
+│   ├── en_ga
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── ga
+│   │       ├── ga_bpe_0.5k
+│   │       │   ├── ga_bpe_0.5k.freq
+│   │       │   ├── ga_bpe_0.5k.model
+│   │       │   └── ga_bpe_0.5k.vocab
+│   │       ├── ga_bpe_1.0k
+│   │       │   ├── ga_bpe_1.0k.freq
+│   │       │   ├── ga_bpe_1.0k.model
+│   │       │   └── ga_bpe_1.0k.vocab
+│   │       ├── ga_bpe_16.0k
+│   │       │   ├── ga_bpe_16.0k.freq
+│   │       │   ├── ga_bpe_16.0k.model
+│   │       │   └── ga_bpe_16.0k.vocab
+│   │       ├── ga_bpe_2.0k
+│   │       │   ├── ga_bpe_2.0k.freq
+│   │       │   ├── ga_bpe_2.0k.model
+│   │       │   └── ga_bpe_2.0k.vocab
+│   │       ├── ga_bpe_32.0k
+│   │       │   ├── ga_bpe_32.0k.freq
+│   │       │   ├── ga_bpe_32.0k.model
+│   │       │   └── ga_bpe_32.0k.vocab
+│   │       ├── ga_bpe_4.0k
+│   │       │   ├── ga_bpe_4.0k.freq
+│   │       │   ├── ga_bpe_4.0k.model
+│   │       │   └── ga_bpe_4.0k.vocab
+│   │       ├── ga_bpe_8.0k
+│   │       │   ├── ga_bpe_8.0k.freq
+│   │       │   ├── ga_bpe_8.0k.model
+│   │       │   └── ga_bpe_8.0k.vocab
+│   │       ├── ga_hft_0.5k
+│   │       │   ├── ga_hft_0.5k.freq
+│   │       │   └── ga_hft_0.5k.vocab
+│   │       ├── ga_hft_0.75k
+│   │       │   ├── ga_hft_0.75k.freq
+│   │       │   └── ga_hft_0.75k.vocab
+│   │       ├── ga_hft_1.5k
+│   │       │   ├── ga_hft_1.5k.freq
+│   │       │   └── ga_hft_1.5k.vocab
+│   │       ├── ga_hft_3.0k
+│   │       │   ├── ga_hft_3.0k.freq
+│   │       │   └── ga_hft_3.0k.vocab
+│   │       ├── ga_hft_4.0k
+│   │       │   ├── ga_hft_4.0k.freq
+│   │       │   └── ga_hft_4.0k.vocab
+│   │       ├── ga_hft_6.0k
+│   │       │   ├── ga_hft_6.0k.freq
+│   │       │   └── ga_hft_6.0k.vocab
+│   │       ├── ga_hft_8.0k
+│   │       │   ├── ga_hft_8.0k.freq
+│   │       │   └── ga_hft_8.0k.vocab
+│   │       ├── ga_unigram_0.5k
+│   │       │   ├── ga_unigram_0.5k.freq
+│   │       │   ├── ga_unigram_0.5k.model
+│   │       │   └── ga_unigram_0.5k.vocab
+│   │       ├── ga_unigram_0.75k
+│   │       │   ├── ga_unigram_0.75k.freq
+│   │       │   ├── ga_unigram_0.75k.model
+│   │       │   └── ga_unigram_0.75k.vocab
+│   │       ├── ga_unigram_1.5k
+│   │       │   ├── ga_unigram_1.5k.freq
+│   │       │   ├── ga_unigram_1.5k.model
+│   │       │   └── ga_unigram_1.5k.vocab
+│   │       ├── ga_unigram_3.0k
+│   │       │   ├── ga_unigram_3.0k.freq
+│   │       │   ├── ga_unigram_3.0k.model
+│   │       │   └── ga_unigram_3.0k.vocab
+│   │       ├── ga_unigram_4.0k
+│   │       │   ├── ga_unigram_4.0k.freq
+│   │       │   ├── ga_unigram_4.0k.model
+│   │       │   └── ga_unigram_4.0k.vocab
+│   │       ├── ga_unigram_6.0k
+│   │       │   ├── ga_unigram_6.0k.freq
+│   │       │   ├── ga_unigram_6.0k.model
+│   │       │   └── ga_unigram_6.0k.vocab
+│   │       └── ga_unigram_8.0k
+│   │           ├── ga_unigram_8.0k.freq
+│   │           ├── ga_unigram_8.0k.model
+│   │           └── ga_unigram_8.0k.vocab
+│   ├── en_hi
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── hi
+│   │       ├── hi_bpe_0.5k
+│   │       │   ├── hi_bpe_0.5k.freq
+│   │       │   ├── hi_bpe_0.5k.model
+│   │       │   └── hi_bpe_0.5k.vocab
+│   │       ├── hi_bpe_1.0k
+│   │       │   ├── hi_bpe_1.0k.freq
+│   │       │   ├── hi_bpe_1.0k.model
+│   │       │   └── hi_bpe_1.0k.vocab
+│   │       ├── hi_bpe_16.0k
+│   │       │   ├── hi_bpe_16.0k.freq
+│   │       │   ├── hi_bpe_16.0k.model
+│   │       │   └── hi_bpe_16.0k.vocab
+│   │       ├── hi_bpe_2.0k
+│   │       │   ├── hi_bpe_2.0k.freq
+│   │       │   ├── hi_bpe_2.0k.model
+│   │       │   └── hi_bpe_2.0k.vocab
+│   │       ├── hi_bpe_32.0k
+│   │       │   ├── hi_bpe_32.0k.freq
+│   │       │   ├── hi_bpe_32.0k.model
+│   │       │   └── hi_bpe_32.0k.vocab
+│   │       ├── hi_bpe_4.0k
+│   │       │   ├── hi_bpe_4.0k.freq
+│   │       │   ├── hi_bpe_4.0k.model
+│   │       │   └── hi_bpe_4.0k.vocab
+│   │       ├── hi_bpe_8.0k
+│   │       │   ├── hi_bpe_8.0k.freq
+│   │       │   ├── hi_bpe_8.0k.model
+│   │       │   └── hi_bpe_8.0k.vocab
+│   │       ├── hi_hft_0.5k
+│   │       │   ├── hi_hft_0.5k.freq
+│   │       │   └── hi_hft_0.5k.vocab
+│   │       ├── hi_hft_0.75k
+│   │       │   ├── hi_hft_0.75k.freq
+│   │       │   └── hi_hft_0.75k.vocab
+│   │       ├── hi_hft_1.5k
+│   │       │   ├── hi_hft_1.5k.freq
+│   │       │   └── hi_hft_1.5k.vocab
+│   │       ├── hi_hft_3.0k
+│   │       │   ├── hi_hft_3.0k.freq
+│   │       │   └── hi_hft_3.0k.vocab
+│   │       ├── hi_hft_4.0k
+│   │       │   ├── hi_hft_4.0k.freq
+│   │       │   └── hi_hft_4.0k.vocab
+│   │       ├── hi_hft_6.0k
+│   │       │   ├── hi_hft_6.0k.freq
+│   │       │   └── hi_hft_6.0k.vocab
+│   │       ├── hi_hft_8.0k
+│   │       │   ├── hi_hft_8.0k.freq
+│   │       │   └── hi_hft_8.0k.vocab
+│   │       ├── hi_unigram_0.5k
+│   │       │   ├── hi_unigram_0.5k.freq
+│   │       │   ├── hi_unigram_0.5k.model
+│   │       │   └── hi_unigram_0.5k.vocab
+│   │       ├── hi_unigram_0.75k
+│   │       │   ├── hi_unigram_0.75k.freq
+│   │       │   ├── hi_unigram_0.75k.model
+│   │       │   └── hi_unigram_0.75k.vocab
+│   │       ├── hi_unigram_1.5k
+│   │       │   ├── hi_unigram_1.5k.freq
+│   │       │   ├── hi_unigram_1.5k.model
+│   │       │   └── hi_unigram_1.5k.vocab
+│   │       ├── hi_unigram_3.0k
+│   │       │   ├── hi_unigram_3.0k.freq
+│   │       │   ├── hi_unigram_3.0k.model
+│   │       │   └── hi_unigram_3.0k.vocab
+│   │       ├── hi_unigram_4.0k
+│   │       │   ├── hi_unigram_4.0k.freq
+│   │       │   ├── hi_unigram_4.0k.model
+│   │       │   └── hi_unigram_4.0k.vocab
+│   │       ├── hi_unigram_6.0k
+│   │       │   ├── hi_unigram_6.0k.freq
+│   │       │   ├── hi_unigram_6.0k.model
+│   │       │   └── hi_unigram_6.0k.vocab
+│   │       └── hi_unigram_8.0k
+│   │           ├── hi_unigram_8.0k.freq
+│   │           ├── hi_unigram_8.0k.model
+│   │           └── hi_unigram_8.0k.vocab
+│   ├── en_lt
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── lt
+│   │       ├── lt_bpe_0.5k
+│   │       │   ├── lt_bpe_0.5k.freq
+│   │       │   ├── lt_bpe_0.5k.model
+│   │       │   └── lt_bpe_0.5k.vocab
+│   │       ├── lt_bpe_1.0k
+│   │       │   ├── lt_bpe_1.0k.freq
+│   │       │   ├── lt_bpe_1.0k.model
+│   │       │   └── lt_bpe_1.0k.vocab
+│   │       ├── lt_bpe_16.0k
+│   │       │   ├── lt_bpe_16.0k.freq
+│   │       │   ├── lt_bpe_16.0k.model
+│   │       │   └── lt_bpe_16.0k.vocab
+│   │       ├── lt_bpe_2.0k
+│   │       │   ├── lt_bpe_2.0k.freq
+│   │       │   ├── lt_bpe_2.0k.model
+│   │       │   └── lt_bpe_2.0k.vocab
+│   │       ├── lt_bpe_32.0k
+│   │       │   ├── lt_bpe_32.0k.freq
+│   │       │   ├── lt_bpe_32.0k.model
+│   │       │   └── lt_bpe_32.0k.vocab
+│   │       ├── lt_bpe_4.0k
+│   │       │   ├── lt_bpe_4.0k.freq
+│   │       │   ├── lt_bpe_4.0k.model
+│   │       │   └── lt_bpe_4.0k.vocab
+│   │       ├── lt_bpe_8.0k
+│   │       │   ├── lt_bpe_8.0k.freq
+│   │       │   ├── lt_bpe_8.0k.model
+│   │       │   └── lt_bpe_8.0k.vocab
+│   │       ├── lt_hft_0.5k
+│   │       │   ├── lt_hft_0.5k.freq
+│   │       │   └── lt_hft_0.5k.vocab
+│   │       ├── lt_hft_0.75k
+│   │       │   ├── lt_hft_0.75k.freq
+│   │       │   └── lt_hft_0.75k.vocab
+│   │       ├── lt_hft_1.5k
+│   │       │   ├── lt_hft_1.5k.freq
+│   │       │   └── lt_hft_1.5k.vocab
+│   │       ├── lt_hft_3.0k
+│   │       │   ├── lt_hft_3.0k.freq
+│   │       │   └── lt_hft_3.0k.vocab
+│   │       ├── lt_hft_4.0k
+│   │       │   ├── lt_hft_4.0k.freq
+│   │       │   └── lt_hft_4.0k.vocab
+│   │       ├── lt_hft_6.0k
+│   │       │   ├── lt_hft_6.0k.freq
+│   │       │   └── lt_hft_6.0k.vocab
+│   │       ├── lt_hft_8.0k
+│   │       │   ├── lt_hft_8.0k.freq
+│   │       │   └── lt_hft_8.0k.vocab
+│   │       ├── lt_unigram_0.5k
+│   │       │   ├── lt_unigram_0.5k.freq
+│   │       │   ├── lt_unigram_0.5k.model
+│   │       │   └── lt_unigram_0.5k.vocab
+│   │       ├── lt_unigram_0.75k
+│   │       │   ├── lt_unigram_0.75k.freq
+│   │       │   ├── lt_unigram_0.75k.model
+│   │       │   └── lt_unigram_0.75k.vocab
+│   │       ├── lt_unigram_1.5k
+│   │       │   ├── lt_unigram_1.5k.freq
+│   │       │   ├── lt_unigram_1.5k.model
+│   │       │   └── lt_unigram_1.5k.vocab
+│   │       ├── lt_unigram_3.0k
+│   │       │   ├── lt_unigram_3.0k.freq
+│   │       │   ├── lt_unigram_3.0k.model
+│   │       │   └── lt_unigram_3.0k.vocab
+│   │       ├── lt_unigram_4.0k
+│   │       │   ├── lt_unigram_4.0k.freq
+│   │       │   ├── lt_unigram_4.0k.model
+│   │       │   └── lt_unigram_4.0k.vocab
+│   │       ├── lt_unigram_6.0k
+│   │       │   ├── lt_unigram_6.0k.freq
+│   │       │   ├── lt_unigram_6.0k.model
+│   │       │   └── lt_unigram_6.0k.vocab
+│   │       └── lt_unigram_8.0k
+│   │           ├── lt_unigram_8.0k.freq
+│   │           ├── lt_unigram_8.0k.model
+│   │           └── lt_unigram_8.0k.vocab
+│   └── en_mr
+│       ├── en
+│       │   ├── en_bpe_0.5k
+│       │   │   ├── en_bpe_0.5k.freq
+│       │   │   ├── en_bpe_0.5k.model
+│       │   │   └── en_bpe_0.5k.vocab
+│       │   ├── en_bpe_1.0k
+│       │   │   ├── en_bpe_1.0k.freq
+│       │   │   ├── en_bpe_1.0k.model
+│       │   │   └── en_bpe_1.0k.vocab
+│       │   ├── en_bpe_16.0k
+│       │   │   ├── en_bpe_16.0k.freq
+│       │   │   ├── en_bpe_16.0k.model
+│       │   │   └── en_bpe_16.0k.vocab
+│       │   ├── en_bpe_2.0k
+│       │   │   ├── en_bpe_2.0k.freq
+│       │   │   ├── en_bpe_2.0k.model
+│       │   │   └── en_bpe_2.0k.vocab
+│       │   ├── en_bpe_32.0k
+│       │   │   ├── en_bpe_32.0k.freq
+│       │   │   ├── en_bpe_32.0k.model
+│       │   │   └── en_bpe_32.0k.vocab
+│       │   ├── en_bpe_4.0k
+│       │   │   ├── en_bpe_4.0k.freq
+│       │   │   ├── en_bpe_4.0k.model
+│       │   │   └── en_bpe_4.0k.vocab
+│       │   ├── en_bpe_8.0k
+│       │   │   ├── en_bpe_8.0k.freq
+│       │   │   ├── en_bpe_8.0k.model
+│       │   │   └── en_bpe_8.0k.vocab
+│       │   ├── en_hft_0.5k
+│       │   │   ├── en_hft_0.5k.freq
+│       │   │   └── en_hft_0.5k.vocab
+│       │   ├── en_hft_0.75k
+│       │   │   ├── en_hft_0.75k.freq
+│       │   │   └── en_hft_0.75k.vocab
+│       │   ├── en_hft_1.5k
+│       │   │   ├── en_hft_1.5k.freq
+│       │   │   └── en_hft_1.5k.vocab
+│       │   ├── en_hft_3.0k
+│       │   │   ├── en_hft_3.0k.freq
+│       │   │   └── en_hft_3.0k.vocab
+│       │   ├── en_hft_4.0k
+│       │   │   ├── en_hft_4.0k.freq
+│       │   │   └── en_hft_4.0k.vocab
+│       │   ├── en_hft_6.0k
+│       │   │   ├── en_hft_6.0k.freq
+│       │   │   └── en_hft_6.0k.vocab
+│       │   ├── en_hft_8.0k
+│       │   │   ├── en_hft_8.0k.freq
+│       │   │   └── en_hft_8.0k.vocab
+│       │   ├── en_unigram_0.5k
+│       │   │   ├── en_unigram_0.5k.freq
+│       │   │   ├── en_unigram_0.5k.model
+│       │   │   └── en_unigram_0.5k.vocab
+│       │   ├── en_unigram_0.75k
+│       │   │   ├── en_unigram_0.75k.freq
+│       │   │   ├── en_unigram_0.75k.model
+│       │   │   └── en_unigram_0.75k.vocab
+│       │   ├── en_unigram_1.5k
+│       │   │   ├── en_unigram_1.5k.freq
+│       │   │   ├── en_unigram_1.5k.model
+│       │   │   └── en_unigram_1.5k.vocab
+│       │   ├── en_unigram_3.0k
+│       │   │   ├── en_unigram_3.0k.freq
+│       │   │   ├── en_unigram_3.0k.model
+│       │   │   └── en_unigram_3.0k.vocab
+│       │   ├── en_unigram_4.0k
+│       │   │   ├── en_unigram_4.0k.freq
+│       │   │   ├── en_unigram_4.0k.model
+│       │   │   └── en_unigram_4.0k.vocab
+│       │   ├── en_unigram_6.0k
+│       │   │   ├── en_unigram_6.0k.freq
+│       │   │   ├── en_unigram_6.0k.model
+│       │   │   └── en_unigram_6.0k.vocab
+│       │   └── en_unigram_8.0k
+│       │       ├── en_unigram_8.0k.freq
+│       │       ├── en_unigram_8.0k.model
+│       │       └── en_unigram_8.0k.vocab
+│       └── mr
+│           ├── mr_bpe_0.5k
+│           │   ├── mr_bpe_0.5k.freq
+│           │   ├── mr_bpe_0.5k.model
+│           │   └── mr_bpe_0.5k.vocab
+│           ├── mr_bpe_1.0k
+│           │   ├── mr_bpe_1.0k.freq
+│           │   ├── mr_bpe_1.0k.model
+│           │   └── mr_bpe_1.0k.vocab
+│           ├── mr_bpe_16.0k
+│           │   ├── mr_bpe_16.0k.freq
+│           │   ├── mr_bpe_16.0k.model
+│           │   └── mr_bpe_16.0k.vocab
+│           ├── mr_bpe_2.0k
+│           │   ├── mr_bpe_2.0k.freq
+│           │   ├── mr_bpe_2.0k.model
+│           │   └── mr_bpe_2.0k.vocab
+│           ├── mr_bpe_32.0k
+│           │   ├── mr_bpe_32.0k.freq
+│           │   ├── mr_bpe_32.0k.model
+│           │   └── mr_bpe_32.0k.vocab
+│           ├── mr_bpe_4.0k
+│           │   ├── mr_bpe_4.0k.freq
+│           │   ├── mr_bpe_4.0k.model
+│           │   └── mr_bpe_4.0k.vocab
+│           ├── mr_bpe_8.0k
+│           │   ├── mr_bpe_8.0k.freq
+│           │   ├── mr_bpe_8.0k.model
+│           │   └── mr_bpe_8.0k.vocab
+│           ├── mr_hft_0.5k
+│           │   ├── mr_hft_0.5k.freq
+│           │   └── mr_hft_0.5k.vocab
+│           ├── mr_hft_0.75k
+│           │   ├── mr_hft_0.75k.freq
+│           │   └── mr_hft_0.75k.vocab
+│           ├── mr_hft_1.5k
+│           │   ├── mr_hft_1.5k.freq
+│           │   └── mr_hft_1.5k.vocab
+│           ├── mr_hft_3.0k
+│           │   ├── mr_hft_3.0k.freq
+│           │   └── mr_hft_3.0k.vocab
+│           ├── mr_hft_4.0k
+│           │   ├── mr_hft_4.0k.freq
+│           │   └── mr_hft_4.0k.vocab
+│           ├── mr_hft_6.0k
+│           │   ├── mr_hft_6.0k.freq
+│           │   └── mr_hft_6.0k.vocab
+│           ├── mr_hft_8.0k
+│           │   ├── mr_hft_8.0k.freq
+│           │   └── mr_hft_8.0k.vocab
+│           ├── mr_unigram_0.5k
+│           │   ├── mr_unigram_0.5k.freq
+│           │   ├── mr_unigram_0.5k.model
+│           │   └── mr_unigram_0.5k.vocab
+│           ├── mr_unigram_0.75k
+│           │   ├── mr_unigram_0.75k.freq
+│           │   ├── mr_unigram_0.75k.model
+│           │   └── mr_unigram_0.75k.vocab
+│           ├── mr_unigram_1.5k
+│           │   ├── mr_unigram_1.5k.freq
+│           │   ├── mr_unigram_1.5k.model
+│           │   └── mr_unigram_1.5k.vocab
+│           ├── mr_unigram_3.0k
+│           │   ├── mr_unigram_3.0k.freq
+│           │   ├── mr_unigram_3.0k.model
+│           │   └── mr_unigram_3.0k.vocab
+│           ├── mr_unigram_4.0k
+│           │   ├── mr_unigram_4.0k.freq
+│           │   ├── mr_unigram_4.0k.model
+│           │   └── mr_unigram_4.0k.vocab
+│           ├── mr_unigram_6.0k
+│           │   ├── mr_unigram_6.0k.freq
+│           │   ├── mr_unigram_6.0k.model
+│           │   └── mr_unigram_6.0k.vocab
+│           └── mr_unigram_8.0k
+│               ├── mr_unigram_8.0k.freq
+│               ├── mr_unigram_8.0k.model
+│               └── mr_unigram_8.0k.vocab
+├── tokenizers_backup
+│   ├── en_ga
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── ga
+│   │       ├── ga_bpe_0.5k
+│   │       │   ├── ga_bpe_0.5k.freq
+│   │       │   ├── ga_bpe_0.5k.model
+│   │       │   └── ga_bpe_0.5k.vocab
+│   │       ├── ga_bpe_1.0k
+│   │       │   ├── ga_bpe_1.0k.freq
+│   │       │   ├── ga_bpe_1.0k.model
+│   │       │   └── ga_bpe_1.0k.vocab
+│   │       ├── ga_bpe_16.0k
+│   │       │   ├── ga_bpe_16.0k.freq
+│   │       │   ├── ga_bpe_16.0k.model
+│   │       │   └── ga_bpe_16.0k.vocab
+│   │       ├── ga_bpe_2.0k
+│   │       │   ├── ga_bpe_2.0k.freq
+│   │       │   ├── ga_bpe_2.0k.model
+│   │       │   └── ga_bpe_2.0k.vocab
+│   │       ├── ga_bpe_32.0k
+│   │       │   ├── ga_bpe_32.0k.freq
+│   │       │   ├── ga_bpe_32.0k.model
+│   │       │   └── ga_bpe_32.0k.vocab
+│   │       ├── ga_bpe_4.0k
+│   │       │   ├── ga_bpe_4.0k.freq
+│   │       │   ├── ga_bpe_4.0k.model
+│   │       │   └── ga_bpe_4.0k.vocab
+│   │       ├── ga_bpe_8.0k
+│   │       │   ├── ga_bpe_8.0k.freq
+│   │       │   ├── ga_bpe_8.0k.model
+│   │       │   └── ga_bpe_8.0k.vocab
+│   │       ├── ga_hft_0.5k
+│   │       │   ├── ga_hft_0.5k.freq
+│   │       │   └── ga_hft_0.5k.vocab
+│   │       ├── ga_hft_0.75k
+│   │       │   ├── ga_hft_0.75k.freq
+│   │       │   └── ga_hft_0.75k.vocab
+│   │       ├── ga_hft_1.5k
+│   │       │   ├── ga_hft_1.5k.freq
+│   │       │   └── ga_hft_1.5k.vocab
+│   │       ├── ga_hft_3.0k
+│   │       │   ├── ga_hft_3.0k.freq
+│   │       │   └── ga_hft_3.0k.vocab
+│   │       ├── ga_hft_4.0k
+│   │       │   ├── ga_hft_4.0k.freq
+│   │       │   └── ga_hft_4.0k.vocab
+│   │       ├── ga_hft_6.0k
+│   │       │   ├── ga_hft_6.0k.freq
+│   │       │   └── ga_hft_6.0k.vocab
+│   │       ├── ga_hft_8.0k
+│   │       │   ├── ga_hft_8.0k.freq
+│   │       │   └── ga_hft_8.0k.vocab
+│   │       ├── ga_unigram_0.5k
+│   │       │   ├── ga_unigram_0.5k.freq
+│   │       │   ├── ga_unigram_0.5k.model
+│   │       │   └── ga_unigram_0.5k.vocab
+│   │       ├── ga_unigram_0.75k
+│   │       │   ├── ga_unigram_0.75k.freq
+│   │       │   ├── ga_unigram_0.75k.model
+│   │       │   └── ga_unigram_0.75k.vocab
+│   │       ├── ga_unigram_1.5k
+│   │       │   ├── ga_unigram_1.5k.freq
+│   │       │   ├── ga_unigram_1.5k.model
+│   │       │   └── ga_unigram_1.5k.vocab
+│   │       ├── ga_unigram_3.0k
+│   │       │   ├── ga_unigram_3.0k.freq
+│   │       │   ├── ga_unigram_3.0k.model
+│   │       │   └── ga_unigram_3.0k.vocab
+│   │       ├── ga_unigram_4.0k
+│   │       │   ├── ga_unigram_4.0k.freq
+│   │       │   ├── ga_unigram_4.0k.model
+│   │       │   └── ga_unigram_4.0k.vocab
+│   │       ├── ga_unigram_6.0k
+│   │       │   ├── ga_unigram_6.0k.freq
+│   │       │   ├── ga_unigram_6.0k.model
+│   │       │   └── ga_unigram_6.0k.vocab
+│   │       └── ga_unigram_8.0k
+│   │           ├── ga_unigram_8.0k.freq
+│   │           ├── ga_unigram_8.0k.model
+│   │           └── ga_unigram_8.0k.vocab
+│   ├── en_hi
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── hi
+│   │       ├── hi_bpe_0.5k
+│   │       │   ├── hi_bpe_0.5k.freq
+│   │       │   ├── hi_bpe_0.5k.model
+│   │       │   └── hi_bpe_0.5k.vocab
+│   │       ├── hi_bpe_1.0k
+│   │       │   ├── hi_bpe_1.0k.freq
+│   │       │   ├── hi_bpe_1.0k.model
+│   │       │   └── hi_bpe_1.0k.vocab
+│   │       ├── hi_bpe_16.0k
+│   │       │   ├── hi_bpe_16.0k.freq
+│   │       │   ├── hi_bpe_16.0k.model
+│   │       │   └── hi_bpe_16.0k.vocab
+│   │       ├── hi_bpe_2.0k
+│   │       │   ├── hi_bpe_2.0k.freq
+│   │       │   ├── hi_bpe_2.0k.model
+│   │       │   └── hi_bpe_2.0k.vocab
+│   │       ├── hi_bpe_32.0k
+│   │       │   ├── hi_bpe_32.0k.freq
+│   │       │   ├── hi_bpe_32.0k.model
+│   │       │   └── hi_bpe_32.0k.vocab
+│   │       ├── hi_bpe_4.0k
+│   │       │   ├── hi_bpe_4.0k.freq
+│   │       │   ├── hi_bpe_4.0k.model
+│   │       │   └── hi_bpe_4.0k.vocab
+│   │       ├── hi_bpe_8.0k
+│   │       │   ├── hi_bpe_8.0k.freq
+│   │       │   ├── hi_bpe_8.0k.model
+│   │       │   └── hi_bpe_8.0k.vocab
+│   │       ├── hi_hft_0.5k
+│   │       │   ├── hi_hft_0.5k.freq
+│   │       │   └── hi_hft_0.5k.vocab
+│   │       ├── hi_hft_0.75k
+│   │       │   ├── hi_hft_0.75k.freq
+│   │       │   └── hi_hft_0.75k.vocab
+│   │       ├── hi_hft_1.5k
+│   │       │   ├── hi_hft_1.5k.freq
+│   │       │   └── hi_hft_1.5k.vocab
+│   │       ├── hi_hft_3.0k
+│   │       │   ├── hi_hft_3.0k.freq
+│   │       │   └── hi_hft_3.0k.vocab
+│   │       ├── hi_hft_4.0k
+│   │       │   ├── hi_hft_4.0k.freq
+│   │       │   └── hi_hft_4.0k.vocab
+│   │       ├── hi_hft_6.0k
+│   │       │   ├── hi_hft_6.0k.freq
+│   │       │   └── hi_hft_6.0k.vocab
+│   │       ├── hi_hft_8.0k
+│   │       │   ├── hi_hft_8.0k.freq
+│   │       │   └── hi_hft_8.0k.vocab
+│   │       ├── hi_unigram_0.5k
+│   │       │   ├── hi_unigram_0.5k.freq
+│   │       │   ├── hi_unigram_0.5k.model
+│   │       │   └── hi_unigram_0.5k.vocab
+│   │       ├── hi_unigram_0.75k
+│   │       │   ├── hi_unigram_0.75k.freq
+│   │       │   ├── hi_unigram_0.75k.model
+│   │       │   └── hi_unigram_0.75k.vocab
+│   │       ├── hi_unigram_1.5k
+│   │       │   ├── hi_unigram_1.5k.freq
+│   │       │   ├── hi_unigram_1.5k.model
+│   │       │   └── hi_unigram_1.5k.vocab
+│   │       ├── hi_unigram_3.0k
+│   │       │   ├── hi_unigram_3.0k.freq
+│   │       │   ├── hi_unigram_3.0k.model
+│   │       │   └── hi_unigram_3.0k.vocab
+│   │       ├── hi_unigram_4.0k
+│   │       │   ├── hi_unigram_4.0k.freq
+│   │       │   ├── hi_unigram_4.0k.model
+│   │       │   └── hi_unigram_4.0k.vocab
+│   │       ├── hi_unigram_6.0k
+│   │       │   ├── hi_unigram_6.0k.freq
+│   │       │   ├── hi_unigram_6.0k.model
+│   │       │   └── hi_unigram_6.0k.vocab
+│   │       └── hi_unigram_8.0k
+│   │           ├── hi_unigram_8.0k.freq
+│   │           ├── hi_unigram_8.0k.model
+│   │           └── hi_unigram_8.0k.vocab
+│   ├── en_lt
+│   │   ├── en
+│   │   │   ├── en_bpe_0.5k
+│   │   │   │   ├── en_bpe_0.5k.freq
+│   │   │   │   ├── en_bpe_0.5k.model
+│   │   │   │   └── en_bpe_0.5k.vocab
+│   │   │   ├── en_bpe_1.0k
+│   │   │   │   ├── en_bpe_1.0k.freq
+│   │   │   │   ├── en_bpe_1.0k.model
+│   │   │   │   └── en_bpe_1.0k.vocab
+│   │   │   ├── en_bpe_16.0k
+│   │   │   │   ├── en_bpe_16.0k.freq
+│   │   │   │   ├── en_bpe_16.0k.model
+│   │   │   │   └── en_bpe_16.0k.vocab
+│   │   │   ├── en_bpe_2.0k
+│   │   │   │   ├── en_bpe_2.0k.freq
+│   │   │   │   ├── en_bpe_2.0k.model
+│   │   │   │   └── en_bpe_2.0k.vocab
+│   │   │   ├── en_bpe_32.0k
+│   │   │   │   ├── en_bpe_32.0k.freq
+│   │   │   │   ├── en_bpe_32.0k.model
+│   │   │   │   └── en_bpe_32.0k.vocab
+│   │   │   ├── en_bpe_4.0k
+│   │   │   │   ├── en_bpe_4.0k.freq
+│   │   │   │   ├── en_bpe_4.0k.model
+│   │   │   │   └── en_bpe_4.0k.vocab
+│   │   │   ├── en_bpe_8.0k
+│   │   │   │   ├── en_bpe_8.0k.freq
+│   │   │   │   ├── en_bpe_8.0k.model
+│   │   │   │   └── en_bpe_8.0k.vocab
+│   │   │   ├── en_hft_0.5k
+│   │   │   │   ├── en_hft_0.5k.freq
+│   │   │   │   └── en_hft_0.5k.vocab
+│   │   │   ├── en_hft_0.75k
+│   │   │   │   ├── en_hft_0.75k.freq
+│   │   │   │   └── en_hft_0.75k.vocab
+│   │   │   ├── en_hft_1.5k
+│   │   │   │   ├── en_hft_1.5k.freq
+│   │   │   │   └── en_hft_1.5k.vocab
+│   │   │   ├── en_hft_3.0k
+│   │   │   │   ├── en_hft_3.0k.freq
+│   │   │   │   └── en_hft_3.0k.vocab
+│   │   │   ├── en_hft_4.0k
+│   │   │   │   ├── en_hft_4.0k.freq
+│   │   │   │   └── en_hft_4.0k.vocab
+│   │   │   ├── en_hft_6.0k
+│   │   │   │   ├── en_hft_6.0k.freq
+│   │   │   │   └── en_hft_6.0k.vocab
+│   │   │   ├── en_hft_8.0k
+│   │   │   │   ├── en_hft_8.0k.freq
+│   │   │   │   └── en_hft_8.0k.vocab
+│   │   │   ├── en_unigram_0.5k
+│   │   │   │   ├── en_unigram_0.5k.freq
+│   │   │   │   ├── en_unigram_0.5k.model
+│   │   │   │   └── en_unigram_0.5k.vocab
+│   │   │   ├── en_unigram_0.75k
+│   │   │   │   ├── en_unigram_0.75k.freq
+│   │   │   │   ├── en_unigram_0.75k.model
+│   │   │   │   └── en_unigram_0.75k.vocab
+│   │   │   ├── en_unigram_1.5k
+│   │   │   │   ├── en_unigram_1.5k.freq
+│   │   │   │   ├── en_unigram_1.5k.model
+│   │   │   │   └── en_unigram_1.5k.vocab
+│   │   │   ├── en_unigram_3.0k
+│   │   │   │   ├── en_unigram_3.0k.freq
+│   │   │   │   ├── en_unigram_3.0k.model
+│   │   │   │   └── en_unigram_3.0k.vocab
+│   │   │   ├── en_unigram_4.0k
+│   │   │   │   ├── en_unigram_4.0k.freq
+│   │   │   │   ├── en_unigram_4.0k.model
+│   │   │   │   └── en_unigram_4.0k.vocab
+│   │   │   ├── en_unigram_6.0k
+│   │   │   │   ├── en_unigram_6.0k.freq
+│   │   │   │   ├── en_unigram_6.0k.model
+│   │   │   │   └── en_unigram_6.0k.vocab
+│   │   │   └── en_unigram_8.0k
+│   │   │       ├── en_unigram_8.0k.freq
+│   │   │       ├── en_unigram_8.0k.model
+│   │   │       └── en_unigram_8.0k.vocab
+│   │   └── lt
+│   │       ├── lt_bpe_0.5k
+│   │       │   ├── lt_bpe_0.5k.freq
+│   │       │   ├── lt_bpe_0.5k.model
+│   │       │   └── lt_bpe_0.5k.vocab
+│   │       ├── lt_bpe_1.0k
+│   │       │   ├── lt_bpe_1.0k.freq
+│   │       │   ├── lt_bpe_1.0k.model
+│   │       │   └── lt_bpe_1.0k.vocab
+│   │       ├── lt_bpe_16.0k
+│   │       │   ├── lt_bpe_16.0k.freq
+│   │       │   ├── lt_bpe_16.0k.model
+│   │       │   └── lt_bpe_16.0k.vocab
+│   │       ├── lt_bpe_2.0k
+│   │       │   ├── lt_bpe_2.0k.freq
+│   │       │   ├── lt_bpe_2.0k.model
+│   │       │   └── lt_bpe_2.0k.vocab
+│   │       ├── lt_bpe_32.0k
+│   │       │   ├── lt_bpe_32.0k.freq
+│   │       │   ├── lt_bpe_32.0k.model
+│   │       │   └── lt_bpe_32.0k.vocab
+│   │       ├── lt_bpe_4.0k
+│   │       │   ├── lt_bpe_4.0k.freq
+│   │       │   ├── lt_bpe_4.0k.model
+│   │       │   └── lt_bpe_4.0k.vocab
+│   │       ├── lt_bpe_8.0k
+│   │       │   ├── lt_bpe_8.0k.freq
+│   │       │   ├── lt_bpe_8.0k.model
+│   │       │   └── lt_bpe_8.0k.vocab
+│   │       ├── lt_hft_0.5k
+│   │       │   ├── lt_hft_0.5k.freq
+│   │       │   └── lt_hft_0.5k.vocab
+│   │       ├── lt_hft_0.75k
+│   │       │   ├── lt_hft_0.75k.freq
+│   │       │   └── lt_hft_0.75k.vocab
+│   │       ├── lt_hft_1.5k
+│   │       │   ├── lt_hft_1.5k.freq
+│   │       │   └── lt_hft_1.5k.vocab
+│   │       ├── lt_hft_3.0k
+│   │       │   ├── lt_hft_3.0k.freq
+│   │       │   └── lt_hft_3.0k.vocab
+│   │       ├── lt_hft_4.0k
+│   │       │   ├── lt_hft_4.0k.freq
+│   │       │   └── lt_hft_4.0k.vocab
+│   │       ├── lt_hft_6.0k
+│   │       │   ├── lt_hft_6.0k.freq
+│   │       │   └── lt_hft_6.0k.vocab
+│   │       ├── lt_hft_8.0k
+│   │       │   ├── lt_hft_8.0k.freq
+│   │       │   └── lt_hft_8.0k.vocab
+│   │       ├── lt_unigram_0.5k
+│   │       │   ├── lt_unigram_0.5k.freq
+│   │       │   ├── lt_unigram_0.5k.model
+│   │       │   └── lt_unigram_0.5k.vocab
+│   │       ├── lt_unigram_0.75k
+│   │       │   ├── lt_unigram_0.75k.freq
+│   │       │   ├── lt_unigram_0.75k.model
+│   │       │   └── lt_unigram_0.75k.vocab
+│   │       ├── lt_unigram_1.5k
+│   │       │   ├── lt_unigram_1.5k.freq
+│   │       │   ├── lt_unigram_1.5k.model
+│   │       │   └── lt_unigram_1.5k.vocab
+│   │       ├── lt_unigram_3.0k
+│   │       │   ├── lt_unigram_3.0k.freq
+│   │       │   ├── lt_unigram_3.0k.model
+│   │       │   └── lt_unigram_3.0k.vocab
+│   │       ├── lt_unigram_4.0k
+│   │       │   ├── lt_unigram_4.0k.freq
+│   │       │   ├── lt_unigram_4.0k.model
+│   │       │   └── lt_unigram_4.0k.vocab
+│   │       ├── lt_unigram_6.0k
+│   │       │   ├── lt_unigram_6.0k.freq
+│   │       │   ├── lt_unigram_6.0k.model
+│   │       │   └── lt_unigram_6.0k.vocab
+│   │       └── lt_unigram_8.0k
+│   │           ├── lt_unigram_8.0k.freq
+│   │           ├── lt_unigram_8.0k.model
+│   │           └── lt_unigram_8.0k.vocab
+│   └── en_mr
+│       ├── en
+│       │   ├── en_bpe_0.5k
+│       │   │   ├── en_bpe_0.5k.freq
+│       │   │   ├── en_bpe_0.5k.model
+│       │   │   └── en_bpe_0.5k.vocab
+│       │   ├── en_bpe_1.0k
+│       │   │   ├── en_bpe_1.0k.freq
+│       │   │   ├── en_bpe_1.0k.model
+│       │   │   └── en_bpe_1.0k.vocab
+│       │   ├── en_bpe_16.0k
+│       │   │   ├── en_bpe_16.0k.freq
+│       │   │   ├── en_bpe_16.0k.model
+│       │   │   └── en_bpe_16.0k.vocab
+│       │   ├── en_bpe_2.0k
+│       │   │   ├── en_bpe_2.0k.freq
+│       │   │   ├── en_bpe_2.0k.model
+│       │   │   └── en_bpe_2.0k.vocab
+│       │   ├── en_bpe_32.0k
+│       │   │   ├── en_bpe_32.0k.freq
+│       │   │   ├── en_bpe_32.0k.model
+│       │   │   └── en_bpe_32.0k.vocab
+│       │   ├── en_bpe_4.0k
+│       │   │   ├── en_bpe_4.0k.freq
+│       │   │   ├── en_bpe_4.0k.model
+│       │   │   └── en_bpe_4.0k.vocab
+│       │   ├── en_bpe_8.0k
+│       │   │   ├── en_bpe_8.0k.freq
+│       │   │   ├── en_bpe_8.0k.model
+│       │   │   └── en_bpe_8.0k.vocab
+│       │   ├── en_hft_0.5k
+│       │   │   ├── en_hft_0.5k.freq
+│       │   │   └── en_hft_0.5k.vocab
+│       │   ├── en_hft_0.75k
+│       │   │   ├── en_hft_0.75k.freq
+│       │   │   └── en_hft_0.75k.vocab
+│       │   ├── en_hft_1.5k
+│       │   │   ├── en_hft_1.5k.freq
+│       │   │   └── en_hft_1.5k.vocab
+│       │   ├── en_hft_3.0k
+│       │   │   ├── en_hft_3.0k.freq
+│       │   │   └── en_hft_3.0k.vocab
+│       │   ├── en_hft_4.0k
+│       │   │   ├── en_hft_4.0k.freq
+│       │   │   └── en_hft_4.0k.vocab
+│       │   ├── en_hft_6.0k
+│       │   │   ├── en_hft_6.0k.freq
+│       │   │   └── en_hft_6.0k.vocab
+│       │   ├── en_hft_8.0k
+│       │   │   ├── en_hft_8.0k.freq
+│       │   │   └── en_hft_8.0k.vocab
+│       │   ├── en_unigram_0.5k
+│       │   │   ├── en_unigram_0.5k.freq
+│       │   │   ├── en_unigram_0.5k.model
+│       │   │   └── en_unigram_0.5k.vocab
+│       │   ├── en_unigram_0.75k
+│       │   │   ├── en_unigram_0.75k.freq
+│       │   │   ├── en_unigram_0.75k.model
+│       │   │   └── en_unigram_0.75k.vocab
+│       │   ├── en_unigram_1.5k
+│       │   │   ├── en_unigram_1.5k.freq
+│       │   │   ├── en_unigram_1.5k.model
+│       │   │   └── en_unigram_1.5k.vocab
+│       │   ├── en_unigram_3.0k
+│       │   │   ├── en_unigram_3.0k.freq
+│       │   │   ├── en_unigram_3.0k.model
+│       │   │   └── en_unigram_3.0k.vocab
+│       │   ├── en_unigram_4.0k
+│       │   │   ├── en_unigram_4.0k.freq
+│       │   │   ├── en_unigram_4.0k.model
+│       │   │   └── en_unigram_4.0k.vocab
+│       │   ├── en_unigram_6.0k
+│       │   │   ├── en_unigram_6.0k.freq
+│       │   │   ├── en_unigram_6.0k.model
+│       │   │   └── en_unigram_6.0k.vocab
+│       │   └── en_unigram_8.0k
+│       │       ├── en_unigram_8.0k.freq
+│       │       ├── en_unigram_8.0k.model
+│       │       └── en_unigram_8.0k.vocab
+│       └── mr
+│           ├── mr_bpe_0.5k
+│           │   ├── mr_bpe_0.5k.freq
+│           │   ├── mr_bpe_0.5k.model
+│           │   └── mr_bpe_0.5k.vocab
+│           ├── mr_bpe_1.0k
+│           │   ├── mr_bpe_1.0k.freq
+│           │   ├── mr_bpe_1.0k.model
+│           │   └── mr_bpe_1.0k.vocab
+│           ├── mr_bpe_16.0k
+│           │   ├── mr_bpe_16.0k.freq
+│           │   ├── mr_bpe_16.0k.model
+│           │   └── mr_bpe_16.0k.vocab
+│           ├── mr_bpe_2.0k
+│           │   ├── mr_bpe_2.0k.freq
+│           │   ├── mr_bpe_2.0k.model
+│           │   └── mr_bpe_2.0k.vocab
+│           ├── mr_bpe_32.0k
+│           │   ├── mr_bpe_32.0k.freq
+│           │   ├── mr_bpe_32.0k.model
+│           │   └── mr_bpe_32.0k.vocab
+│           ├── mr_bpe_4.0k
+│           │   ├── mr_bpe_4.0k.freq
+│           │   ├── mr_bpe_4.0k.model
+│           │   └── mr_bpe_4.0k.vocab
+│           ├── mr_bpe_8.0k
+│           │   ├── mr_bpe_8.0k.freq
+│           │   ├── mr_bpe_8.0k.model
+│           │   └── mr_bpe_8.0k.vocab
+│           ├── mr_hft_0.5k
+│           │   ├── mr_hft_0.5k.freq
+│           │   └── mr_hft_0.5k.vocab
+│           ├── mr_hft_0.75k
+│           │   ├── mr_hft_0.75k.freq
+│           │   └── mr_hft_0.75k.vocab
+│           ├── mr_hft_1.5k
+│           │   ├── mr_hft_1.5k.freq
+│           │   └── mr_hft_1.5k.vocab
+│           ├── mr_hft_3.0k
+│           │   ├── mr_hft_3.0k.freq
+│           │   └── mr_hft_3.0k.vocab
+│           ├── mr_hft_4.0k
+│           │   ├── mr_hft_4.0k.freq
+│           │   └── mr_hft_4.0k.vocab
+│           ├── mr_hft_6.0k
+│           │   ├── mr_hft_6.0k.freq
+│           │   └── mr_hft_6.0k.vocab
+│           ├── mr_hft_8.0k
+│           │   ├── mr_hft_8.0k.freq
+│           │   └── mr_hft_8.0k.vocab
+│           ├── mr_unigram_0.5k
+│           │   ├── mr_unigram_0.5k.freq
+│           │   ├── mr_unigram_0.5k.model
+│           │   └── mr_unigram_0.5k.vocab
+│           ├── mr_unigram_0.75k
+│           │   ├── mr_unigram_0.75k.freq
+│           │   ├── mr_unigram_0.75k.model
+│           │   └── mr_unigram_0.75k.vocab
+│           ├── mr_unigram_1.5k
+│           │   ├── mr_unigram_1.5k.freq
+│           │   ├── mr_unigram_1.5k.model
+│           │   └── mr_unigram_1.5k.vocab
+│           ├── mr_unigram_3.0k
+│           │   ├── mr_unigram_3.0k.freq
+│           │   ├── mr_unigram_3.0k.model
+│           │   └── mr_unigram_3.0k.vocab
+│           ├── mr_unigram_4.0k
+│           │   ├── mr_unigram_4.0k.freq
+│           │   ├── mr_unigram_4.0k.model
+│           │   └── mr_unigram_4.0k.vocab
+│           ├── mr_unigram_6.0k
+│           │   ├── mr_unigram_6.0k.freq
+│           │   ├── mr_unigram_6.0k.model
+│           │   └── mr_unigram_6.0k.vocab
+│           └── mr_unigram_8.0k
+│               ├── mr_unigram_8.0k.freq
+│               ├── mr_unigram_8.0k.model
+│               └── mr_unigram_8.0k.vocab
+└── tok_experiments.ipynb
+
+392 directories, 2402 files

@@ -1,7 +1,7 @@
 dataset	lang	tokenizer	vocab_size	freq@95%	avg_len
-en_lt	lt	hft	500	4	63.0077
 en_lt	en	bpe	500	195	57.455
 en_lt	lt	unigram	500	268	61.48005
+en_lt	lt	hft	500	4	63.0077
 en_lt	en	unigram	500	222	56.24415
 en_lt	lt	bpe	500	272	61.60785
 en_lt	en	hft	500	3	62.1314
