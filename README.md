@@ -1,18 +1,14 @@
-#CURRENT OBJECTIVE
+# HFT: High Frequency Tokens for Small Datasets (working title)
 
-train tokenizers for same sizes as Gowda and May, 2021
+**H**igh **F**requency **T**oken(izer) is a new subword segmentation algorithm developed to address the issue of low frequency tokens in the trainig data for Neural Machine Translation systems.
 
->	see notebook fo TODO
+Description TBA
 
-reproduce their results and plot them
+## Usage
 
-train HFToks and plot Freq@95% and Length (in toks) vs vocab_size
+TBA
 
-our Freq@95% should be HIGHER, and Length should be LOWER
+## References
 
->	good for Low Res because of efficiency, saved memory, better use of limited data
-
-If possible then train NMT for each tokenizer and plot that
-
-Copy of LoResMT 2021 shared task to experiment with tokenizer vocabulary size and BLEU scores in Low Res
+## Cite (hopefully)
 

@@ -37,7 +37,3 @@ en_lt	en	unigram	8000	3	31.0067
 en_lt	lt	unigram	8000	5	31.30365
 en_lt	en	hft	8000	6	28.9193
 en_lt	en	bpe	8000	2	30.66325
-en_lt	en	bpe	16000	1	29.0824
-en_lt	lt	bpe	16000	3	26.96595
-en_lt	lt	bpe	32000	1	25.08495
-en_lt	en	bpe	32000	1	28.5019
