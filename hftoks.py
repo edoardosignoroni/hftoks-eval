@@ -258,8 +258,8 @@ def process_text(word_iter, vocab_size=2000, step_size=100):
             if vocab.get_freq(b) is None:
                 vocab.increment(b, 1)
                 n += 1
-        print(step, n, min_added_freq,
-              [(''.join(s), f) for (f,s) in topc[:5]])
+       #print(step, n, min_added_freq,
+       #      [(''.join(s), f) for (f,s) in topc[:5]])
         if n > vocab_size:
             break
 
