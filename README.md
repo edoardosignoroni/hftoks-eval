@@ -6,9 +6,18 @@ Description TBA
 
 ## Usage
 
-TBA
+To use `hft`, the input data must be pretokenized with: 
 
-## References
+`pretokenize INTEXTFILE > OUTTEXTFILE`. 
+
+
+To learn a token vocabulary use:
+`hftoks.py learn INTEXTFILE OUTVOCABFILE [VOCAB_SIZE [STEP_SIZE]]'`
+
+And then to tokenize your data:
+`hftoks.py tokenize VOCABFILE < INTEXT > OUTTOKENS'`
+
 
 ## Cite (hopefully)
 
+Signoroni and Rychly, "HFT: High Frequency Tokens for Low-Resource NMT", ...
