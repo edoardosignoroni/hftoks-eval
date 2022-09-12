@@ -1,8 +1,8 @@
-# HFT: High Frequency Tokens for Small Datasets (working title)
+# HFT: High Frequency Tokens for Low-Resource NMT
 
-**H**igh **F**requency **T**oken(izer) is a new subword segmentation algorithm developed to address the issue of low frequency tokens in the trainig data for Neural Machine Translation systems.
+**H**igh **F**requency **T**okenizer is a new subword segmentation algorithm developed to address the issue of low frequency tokens in the training data for Neural Machine Translation systems.
 
-Description TBA
+We use pretokenization
 
 ## Usage
 
@@ -18,6 +18,6 @@ And then to tokenize your data:
 `hftoks.py tokenize VOCABFILE < INTEXT > OUTTOKENS'`
 
 
-## Cite (hopefully)
+## Cite
 
-Signoroni and Rychly, "HFT: High Frequency Tokens for Low-Resource NMT", ...
+> Signoroni and Rychly, "HFT: High Frequency Tokens for Low-Resource NMT", Forthcoming

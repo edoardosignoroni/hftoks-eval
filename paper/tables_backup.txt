@@ -1,0 +1,73 @@
+\begin{figure*}[h!]
+    \noindent
+    \makebox[\textwidth]{
+    \begin{tabular}{c c c}
+          \includegraphics[scale=0.30]{freq@95_lt.png} & \includegraphics[scale=0.30]{freq@95_am.png} & \includegraphics[scale=0.30]{freq@95_ojb.png} \\
+          \includegraphics[scale=0.30]{μ_lt.png} & \includegraphics[scale=0.30]{μ_am.png} & \includegraphics[scale=0.30]{μ_ojb.png} \\
+          \includegraphics[scale=0.30]{weighted_lt.png} & \includegraphics[scale=0.30]{weighted_am.png} & \includegraphics[scale=0.30]{weighted_ojb.png} \\
+          %\includegraphics[scale=0.30]{freq@95_cs.png} & \includegraphics[scale=0.30]{freq@95_en.png} & \includegraphics[scale=0.30]{freq@95_fi.png} \\
+          %\includegraphics[scale=0.30]{freq@95_ga.png} & \includegraphics[scale=0.30]{freq@95_hi.png} & \includegraphics[scale=0.30]{freq@95_it.png} \\
+          %\includegraphics[scale=0.30]{freq@95_ja.png} & \includegraphics[scale=0.30]{freq@95_jak.png} & \includegraphics[scale=0.30]{freq@95_lt.png} \\
+          %\includegraphics[scale=0.30]{freq@95_mr.png} & \includegraphics[scale=0.30]{freq@95_my.png} & \includegraphics[scale=0.30]{freq@95_ojb.png}\\
+          %\includegraphics[scale=0.30]{freq@95_sv.png} & \includegraphics[scale=0.30]{freq@95_syr.png} & \includegraphics[scale=0.30]{freq@95_zu.png} \\
+    \end{tabular}
+    }
+    \caption{$F_{95\%}$ (higher is better), $\mu$ (lower is better), and $\nu$ weighted average (higher is better) plotted against vocabulary size for each model and language.}
+    %\label{fig:freq@95}
+    \label{fig:results_sample}
+\end{figure*}
+
+\begin{figure*}[h!]
+    \noindent
+    \makebox[\textwidth]{
+    \begin{tabular}{c c c}
+          \includegraphics[scale=0.30]{μ_am.png} & \includegraphics[scale=0.30]{μ_ar.png} & \includegraphics[scale=0.30]{μ_chr.png} \\
+          \includegraphics[scale=0.30]{μ_cs.png} & \includegraphics[scale=0.30]{μ_en.png} & \includegraphics[scale=0.30]{μ_fi.png} \\
+          \includegraphics[scale=0.30]{μ_ga.png} & \includegraphics[scale=0.30]{μ_hi.png} & \includegraphics[scale=0.30]{μ_it.png} \\
+          \includegraphics[scale=0.30]{μ_ja.png} & \includegraphics[scale=0.30]{μ_jak.png} & \includegraphics[scale=0.30]{μ_lt.png} \\
+          \includegraphics[scale=0.30]{μ_mr.png} & \includegraphics[scale=0.30]{μ_my.png} & \includegraphics[scale=0.30]{μ_ojb.png}\\
+          \includegraphics[scale=0.30]{μ_sv.png} & \includegraphics[scale=0.30]{μ_syr.png} & \includegraphics[scale=0.30]{μ_zu.png} \\
+    \end{tabular}
+    }
+    \caption{$\mu$ (lower is better) plotted against vocabulary size for each model and language.}
+    \label{fig:avg_len}
+\end{figure*}
+
+\begin{figure*}[h!]
+    \noindent
+    \makebox[\textwidth]{
+    \begin{tabular}{c c c}
+          \includegraphics[scale=0.30]{weighted_am.png} & \includegraphics[scale=0.30]{weighted_ar.png} & \includegraphics[scale=0.30]{weighted_chr.png} \\
+          \includegraphics[scale=0.30]{weighted_cs.png} & \includegraphics[scale=0.30]{weighted_en.png} & \includegraphics[scale=0.30]{weighted_fi.png} \\
+          \includegraphics[scale=0.30]{weighted_ga.png} & \includegraphics[scale=0.30]{weighted_hi.png} & \includegraphics[scale=0.30]{weighted_it.png} \\
+          \includegraphics[scale=0.30]{weighted_ja.png} & \includegraphics[scale=0.30]{weighted_jak.png} & \includegraphics[scale=0.30]{weighted_lt.png} \\
+          \includegraphics[scale=0.30]{weighted_mr.png} & \includegraphics[scale=0.30]{weighted_my.png} & \includegraphics[scale=0.30]{weighted_ojb.png}\\
+          \includegraphics[scale=0.30]{weighted_sv.png} & \includegraphics[scale=0.30]{weighted_syr.png} & \includegraphics[scale=0.30]{weighted_zu.png} \\
+    \end{tabular}
+    }
+    \caption{$\nu$ (higher is better) plotted against vocabulary size for each model and language.}
+    \label{fig:weighted}
+\end{figure*}
+
+
+\begin{figure*}[h!]
+    \noindent
+    \makebox[\textwidth]{
+    \begin{tabular}{c c c}
+          \includegraphics[scale=0.15]{freqs_am_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_ar_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_chr_hft_0.75.png} \\
+          \includegraphics[scale=0.15]{freqs_cs_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_en_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_fi_hft_0.75.png} \\
+          \includegraphics[scale=0.15]{freqs_ga_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_hi_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_it_hft_0.75.png} \\
+          \includegraphics[scale=0.15]{freqs_ja_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_jak_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_lt_hft_0.75.png} \\
+          \includegraphics[scale=0.15]{freqs_mr_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_my_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_ojb_hft_0.75.png}\\
+          \includegraphics[scale=0.15]{freqs_sv_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_syr_hft_0.75.png} & \includegraphics[scale=0.15]{freqs_zu_hft_0.75.png} \\
+    \end{tabular}
+    }
+    \caption{Frequency distribution of tokens in the 0.75k vocabularies. We do not plot the first 50 most frequent tokens to obtain cleaner plots and to focus on the bottom of the vocabulary. \texttt{hft} is in orange, \texttt{bpe} in in blue, and \texttt{unigram} in in green.}
+    \label{fig:freqs}
+\end{figure*}
+
+
+To note is the Japanese plot, which may explain why \texttt{hft} struggles on the evaluation metrics for this language. In Figure \ref{fig:freqs}, we are plotting the frequency distributions of the 0.75k vocabularies. In the case of Japanese, however, our vocabulary reaches 2.0k. This is due of the aforementioned constraint of storing every occurring character in the training data. While for other languages this design choice has almost no impact on the vocabulary size, for Japanese it seems problematic for the unique features of the language. On top of two sets of syllabic characters, called \textit{hiragana} and \textit{katakana}, Japanese also employs a huge amount of Chinese-derived ideograms called \textit{kanji}. For example, it is estimated that more than 3.000 kanji are needed to fully understand a Japanese newspaper article. 
+
+In our case, the vocabulary got saturated by a huge amount of unique \textit{kanji} with low frequencies, even in with a dataset limited to a small domain, such as the Bible. However, when truncating the plot at the 750th entry, \texttt{hft} still performs equal to other methods. Nonetheless, it can be useful to further explore and experiment with languages that use similar writing solutions.
+
