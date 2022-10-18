@@ -2,7 +2,7 @@
 
 **H**igh **F**requency **T**okenizer is a new subword segmentation algorithm developed to address the issue of low frequency tokens in the training data for Neural Machine Translation systems.
 
-For updated version see the main HFT repo at https://github.com/pary42/hftoks
+For the updated versions, see the main HFT repo at https://github.com/pary42/hftoks
 
 ## Usage
 
